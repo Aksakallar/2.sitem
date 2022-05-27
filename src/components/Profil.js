@@ -127,7 +127,7 @@ const Profil = () => {
            <Text>
                <h1>Ola,</h1> 
                <h3> I'm Mehmet Asker</h3>
-               <h6>I make a website by designing and coding to improve myself.</h6>
+               <h6>I am increasing my experience and thus designing websites.</h6>
            </Text>
            
         </AltBox>

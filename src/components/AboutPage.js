@@ -88,12 +88,12 @@ const AboutPage = () => {
 
         <Main>
 
-        Thanks to our self-improving structure, I design simple websites. I plan to improve my skills with my own experience and reach my goals by increasing my experience.
-          <br/> <br/>
-        My roadmap also includes Satellite Technician, Live Casino, Multi-Level Marketing and finally Software industry information. I aim to build my future with this information. I like to read books and do research.
-          <br/> <br/>
-        I believe that everything you do with your heart and mind will turn into a work of art, and I design my future by imagining it. Feel free to connect with me on social links.
-          
+              I design simple websites by improving myself. I plan to improve my skills with my own experience and reach my goals by increasing my experience.
+              <br/> <br/>
+              My roadmap also includes Satellite Technician, Live Casino, Multi-Level Marketing and finally Software industry information. I aim to build my future with this information. I like to read books and do research.
+              <br/> <br/>
+              I believe that everything you do with your heart and mind will turn into a work of art, and I design my future by imagining it. Feel free to connect with me on social links. 
+              
         </Main>
 
         <AnaTitle text="About" top="10%" left="5%"/>

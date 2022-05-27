@@ -104,7 +104,7 @@ const MySkillsPage = () => {
           </Title>
 
           <Description >
-              I like to design things rather than spend my spare time
+          I like to learn and design things instead of wasting my free time
           </Description>
           <Description >
               <strong>I like to Design</strong> 
@@ -128,7 +128,7 @@ const MySkillsPage = () => {
 
         <Main>
           <Title>
-            <Develope width={35} height={35}/> FrontEnd
+            <Develope width={35} height={35}/> Developer
           </Title>
 
           <Description >
@@ -137,7 +137,7 @@ const MySkillsPage = () => {
           <Description >
               <strong>Skills</strong> 
               <p>
-               C, C++, Html, Css, Sass, Js, React, Bootstrap, Firebase.
+               C, C++, Html, Css, Sass Bootstrap, Js, React, Firebase.
                 </p>
 
           </Description>
