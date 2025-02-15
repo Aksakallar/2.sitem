@@ -37,9 +37,9 @@ cursor: pointer;
 
 `
 
-const PowerButton = () => {
+const PowerButton = ({onClick=()=>{}}) => {
   return (
-    <Power>
+    <Power onClick={onClick}>
       <NavLink to="/">
       <PowerBtn width={30} height={30} fill='currentColor'/>
       </NavLink>

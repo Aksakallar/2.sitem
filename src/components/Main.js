@@ -56,6 +56,7 @@ z-index: 1;
 
 @media screen and (max-width: 800px) {
   top: 45%;
+  color: ${({isClicked, theme}) => isClicked ? theme.body : theme.text};
   }
 `
 
@@ -87,8 +88,9 @@ const BottomBar = styled.div`
   justify-content: space-evenly;
 
   @media screen and (max-width: 800px) {
-   color: ${props => props.theme.body};
-   bottom: 42rem;
+    color: ${props => props.theme.body};
+    bottom: 42rem;
+    z-index: 0;
    
     }
 `
@@ -193,7 +195,7 @@ const Main = (props) => {
     <MainContainer>
       <DarkDiv className="darkside" click={click}/>
         <Container>
-              <PowerButton/>
+              <PowerButton onClick={()=>setClick(false)}/>
               <LogoComponent theme={click ? 'dark' : 'light'}/>
               <SocialIcons theme={click ? 'dark' : 'light'} />
               
@@ -219,7 +221,7 @@ const Main = (props) => {
                 </motion.h2>
               </Contact>
 
-              <BLOG to="/blog">
+              <BLOG to="/blog" isClicked={click}>
                 <motion.h2 
                 initial={{
                   y:-200,
