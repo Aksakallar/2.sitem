@@ -98,57 +98,56 @@ const MySkillsPage = () => {
       <PowerButton/>
       <SocialIcons theme='light'/>
       <CellComponent theme='light'/>
-        <Main>
-          <Title>
-            <Design width={35} height={35}/> Designer
-          </Title>
 
-          <Description >
-          I like to learn and design things instead of wasting my free time
-          </Description>
-          <Description >
-              <strong>I like to Design</strong> 
-                <ul>
-                  <li>Web Design</li>
-                  <li>Mobile Apps</li>
-                </ul>
+      <Main>
+  <Title>
+    <Design width={35} height={35}/> Designer
+  </Title>
 
-          </Description>
+  <Description>
+    I enjoy learning and designing meaningful things in my free time instead of wasting it.
+  </Description>
 
-          <Description >
-              <strong>Tools</strong> 
-              <p>
-              Adobe Illustrator 
-                </p>
+  <Description>
+    <strong>I like to Design</strong>
+    <ul>
+      <li>Simple & Useful Websites</li>
+      <li>Social Media Visuals</li>
+    </ul>
+  </Description>
 
-          </Description>
+  <Description>
+    <strong>Tools</strong>
+    <p>
+      Canva, Adobe Illustrator, Figma
+    </p>
+  </Description>
+</Main>
 
-          
-        </Main>
+<Main>
+  <Title>
+    <Develope width={35} height={35}/> Developer
+  </Title>
 
-        <Main>
-          <Title>
-            <Develope width={35} height={35}/> Developer
-          </Title>
+  <Description>
+    I focus on learning by doing. I’m on a journey to build my own path in tech and entrepreneurship.
+  </Description>
 
-          <Description >
-              I value a job or brand I do, so I improve myself by bringing new ideas to life. 
-          </Description>
-          <Description >
-              <strong>Skills</strong> 
-              <p>
-               C, C++, Html, Css, Sass Bootstrap, Js, React, Firebase.
-                </p>
+  <Description>
+    <strong>Skills</strong>
+    <p>
+      Basic knowledge of HTML, CSS, C#, and a growing interest in web technologies.
+    </p>
+  </Description>
 
-          </Description>
-          <Description >
-              <strong>Tools</strong> 
-              <p>
-                VScode, Github etc.
-                </p>
-
-          </Description>
-        </Main>
+  <Description>
+    <strong>Tools</strong>
+    <p>
+      Visual Studio, GitHub, Shopify, Trello
+    </p>
+  </Description>
+</Main>
+    
         <AnaTitle text="About" top="80%" right="30%"/>
       </Box>
 
