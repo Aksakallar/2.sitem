@@ -55,7 +55,15 @@ export const Blogs = [
     "date": "May 10, 2025",
     "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9nZp2p1Bg9QlweulOCcURe3Tj3lVgzrBuNg&usqp=CAU",
     "link": ""
-  }
+  },
+      {
+  "id": 8,
+  "name": "The Philosophy of Working in the Casino World: A Look at the Pros and Cons",
+  "tags": ["React", "Formik", "TailwindCSS", "Philosophy", "Gambling"],
+  "date": "May 10, 2025",
+  "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9nZp2p1Bg9QlweulOCcURe3Tj3lVgzrBuNg&usqp=CAU",
+  "link": ""
+}
 
   
 ] 
