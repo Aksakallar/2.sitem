@@ -126,7 +126,7 @@ const Profil = () => {
         <AltBox>
            <Text>
                <h1>Hello!</h1> 
-               <h3> I'm Mehmet Asker</h3>
+               <h3> I'm Burak Düzdaban</h3>
                <h6>On a journey of growth, learning, and entrepreneurship.</h6>
            </Text>
            
