@@ -1,82 +1,72 @@
-import { motion } from 'framer-motion'
-import React, {useState} from 'react'
-import { NavLink } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components'
-import LogoComponent from '../subComponents/LogoComponent';
-import PowerButton from '../subComponents/PowerButton';
-import SocialIcons from '../subComponents/SocialIcons'; 
-import { CasinoChip } from './AllSvgs';
-import Profil from './Profil';
-
+import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import styled, { keyframes } from "styled-components";
+import LogoComponent from "../subComponents/LogoComponent";
+import PowerButton from "../subComponents/PowerButton";
+import SocialIcons from "../subComponents/SocialIcons";
+import { CasinoChip } from "./AllSvgs";
+import Profil from "./Profil";
 
 const MainContainer = styled.div`
-background: ${props => props.theme.body};
-width: 100vw;
-height: 100vh;
-overflow: hidden;
+  background: ${(props) => props.theme.body};
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 
-position: relative;
+  position: relative;
 
-h2,h3,h4,h5,h6{
-  font-family: 'Karla', sans-serif;
-  font-weight:500;
-}
-
-  
-
-
-`
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Karla", sans-serif;
+    font-weight: 500;
+  }
+`;
 
 const Container = styled.div`
-
-padding: 2rem;
-
-`
+  padding: 2rem;
+`;
 const Contact = styled(NavLink)`
-  
-  color: ${props => props.theme.text};
+  color: ${(props) => props.theme.text};
   position: absolute;
   top: 2rem;
   right: calc(1rem + 2vw);
   text-decoration: none;
   z-index: 1;
-
-
-`
+`;
 
 const BLOG = styled(NavLink)`
-color: ${props => props.theme.text};
-position: absolute;
-top: 50%;
-right: calc(1rem + 2vw);
-transform: rotate(90deg) translate(-50%, -50%);
-text-decoration: none;
-z-index: 1;
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  position: absolute;
+  top: 50%;
+  right: calc(1rem + 2vw);
+  transform: rotate(90deg) translate(-50%, -50%);
+  text-decoration: none;
+  z-index: 1;
 
-
-@media screen and (max-width: 800px) {
-  top: 45%;
+  @media screen and (max-width: 800px) {
+    top: 45%;
   }
-`
+`;
 
 const WORK = styled(NavLink)`
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  position: absolute;
+  top: 50%;
+  left: calc(1rem + 2vw);
+  transform: translate(-50%, 50%) rotate(-90deg);
+  text-decoration: none;
+  z-index: 1;
 
-color: ${props => props.click ? props.theme.body : props.theme.text };
-position: absolute;
-top: 50%;
-left: calc(1rem + 2vw);
-transform: translate(-50%, 50%) rotate(-90deg);
-text-decoration: none;
-z-index: 1;
-
-@media screen and (max-width: 800px) {
-    
-  top: 40%;
+  @media screen and (max-width: 800px) {
+    top: 40%;
   }
-`
+`;
 
 const BottomBar = styled.div`
-
   position: absolute;
   bottom: 1rem;
   left: 0;
@@ -87,25 +77,57 @@ const BottomBar = styled.div`
   justify-content: space-evenly;
 
   @media screen and (max-width: 800px) {
-   color: ${props => props.theme.body};
-   bottom: 42rem;
-   
-    }
-`
+    display: none;
+  }
+`;
 
 const ABOUT = styled(NavLink)`
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  text-decoration: none;
+  z-index: 1;
 
-color: ${props => props.click ? props.theme.body : props.theme.text };
-text-decoration: none;
-z-index:1;
-`
+  &:not(.mobile-about) {
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &.mobile-about {
+    display: none;
+
+    @media screen and (max-width: 800px) {
+      display: block;
+      position: absolute;
+      top: 6rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+`;
 
 const Reference = styled(NavLink)`
+  color: ${(props) => props.theme.text};
+  text-decoration: none;
+  z-index: 1;
 
-color: ${props => props.theme.text};
-text-decoration: none;
-z-index: 1;
-`
+  &:not(.mobile-skills) {
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &.mobile-skills {
+    display: none;
+
+    @media screen and (max-width: 800px) {
+      display: block;
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+`;
 
 const rotate = keyframes`
 
@@ -116,183 +138,209 @@ const rotate = keyframes`
   transform: rotate(0);
   }
 
-`
+`;
 
 const Center = styled.button`
+  position: absolute;
+  top: ${(props) => (props.click ? "85%" : "50%")};
+  left: ${(props) => (props.click ? "95%" : "50%")};
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
 
-    position: absolute;
-    top: ${props => props.click ? '85%' : '50%'};
-    left: ${props => props.click ? '95%' : '50%'};
-    transform: translate(-50%,-50%); 
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  aling-items: center;
+  transition: all 1s ease;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    aling-items: center; 
-    transition: all 1s ease;
+  & > :first-child {
+    animation: ${rotate} infinite 2s linear;
+  }
 
-    &>:first-child{
-      animation: ${rotate} infinite 2s linear;
-    }
+  & > :last-child {
+    display: ${(props) => (props.click ? "none" : "inline-block")};
+    margin: 0 auto;
+    padding-top: 1rem;
+  }
 
-    
-    &>:last-child{ 
-      display: ${props => props.click ? 'none' : 'inline-block'};
-      margin: 0 auto;
-      padding-top: 1rem;
-    } 
-    
-    
-    @media screen and (max-width: 800px) {
-    
-      top: ${props => props.click ? '90%' : '50%'};
-      left: ${props => props.click ? '50%' : '50%'};
-      }
-  
-   
-`
-
+  @media screen and (max-width: 800px) {
+    top: ${(props) => (props.click ? "85%" : "50%")};
+    left: ${(props) => (props.click ? "50%" : "50%")};
+  }
+`;
 
 const DarkDiv = styled.div`
+  position: absolute;
+  top: 0;
+  background-color: ${(props) => props.theme.text};
+  bottom: 0;
+  right: 50%;
+  width: ${(props) => (props.click ? "50%" : "0%")};
+  height: ${(props) => (props.click ? "100%" : "0%")};
+  z-index: 1;
+  transition: height 0.5s ease, width 0.9s ease 0.5s;
 
-    position: absolute;
-    top: 0;
-    background-color: ${props => props.theme.text};
-    bottom: 0;
-    right: 50%;
-    width: ${props => props.click ? '50%' : '0%'};
-    height: ${props => props.click ? '100%' : '0%'};
-    z-index: 1;
-    transition: height 0.5s ease, width .9s ease 0.5s;
+  @media screen and (max-width: 800px) {
+    width: ${(props) => (props.click ? "100%" : "0%")};
+    height: ${(props) => (props.click ? "50%" : "0%")};
+    transition: height 0.1s ease, width 0.1s ease 0.1s;
+    right: 0%;
 
-     
-    @media screen and (max-width: 800px) {
-            
-      width: ${props => props.click ? '100%' : '0%'};
-      height: ${props => props.click ? '50%' : '0%'}; 
-      transition: height 0.1s ease, width .1s ease 0.1s;
-      right: 0%;
-    }
-`
-
-
+  }
+`;
 
 const Main = (props) => {
-  
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
 
-  
-
   return (
     <MainContainer>
-      <DarkDiv className="darkside" click={click}/>
-        <Container>
-              <PowerButton/>
-              <LogoComponent theme={click ? 'dark' : 'light'}/>
-              <SocialIcons theme={click ? 'dark' : 'light'} />
-              
-              <Center click={click}>
-                  <CasinoChip className="duyarli" onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor'/>
-                  <span >click here</span>
-              </Center>
+      <DarkDiv className="darkside" click={click} />
+      <Container>
+        <PowerButton />
+        <LogoComponent theme={click ? "dark" : "light"} />
+        <SocialIcons theme={click ? "dark" : "light"} />
 
-              <Contact target="_blank" to={{pathname: 'mailto:aksaka7@gmail.com'}}>              
-                <motion.h2 
-                  initial={{
-                    y:-200,
-                    transition:{type:'spring', duration:1.5, delay:1}
-                  }}
-                  animate={{
-                    y:0,
-                    transition:{type:'spring', duration:1.5, delay:1}
-                  }}
-                  whileHover={{scale:1.2}}
-                  whileTap={{scale:0.9}}
-                >
-                    E-mail
-                </motion.h2>
-              </Contact>
+        <Center click={click}>
+          <CasinoChip
+            className="duyarli"
+            onClick={() => handleClick()}
+            width={click ? 120 : 200}
+            height={click ? 120 : 200}
+            fill="currentColor"
+          />
+          <span>click here</span>
+        </Center>
 
-              <BLOG to="/blog">
-                <motion.h2 
-                initial={{
-                  y:-200,
-                  transition:{type:'spring', duration:1.5, delay:1}
-                }}
-                animate={{
-                  y:0,
-                  transition:{type:'spring', duration:1.5, delay:1}
-                }}
-                  whileHover={{scale:1.2}}
-                  whileTap={{scale:0.9}}
-                >
-                     Blog
-                </motion.h2>
-              </BLOG>
+        <Contact target="_blank" to={{ pathname: "mailto:aksaka7@gmail.com" }}>
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            E-mail
+          </motion.h2>
+        </Contact>
 
-              <WORK to="/work" click={click}>
-                <motion.h2 
-                  initial={{
-                    y:-200,
-                    transition:{type:'spring', duration:1.5, delay:1}
-                  }}
-                  animate={{
-                    y:0,
-                    transition:{type:'spring', duration:1.5, delay:1}
-                  }}
-                  whileHover={{scale:1.2}}
-                  whileTap={{scale:0.9}}
-                >
-                      Work
-                </motion.h2>
-              </WORK>
+        <BLOG to="/blog" click={click}>
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Blog
+          </motion.h2>
+        </BLOG>
 
-              <BottomBar>
-              <ABOUT to="/about" click={click}>
-                <motion.h2 
-                  initial={{
-                    y:200,
-                    transition:{type:'spring', duration:1.5, delay:1}
-                  }}
-                  animate={{
-                    y:0,
-                    transition:{type:'spring', duration:1.5, delay:1}
-                  }}
-                  whileHover={{scale:1.2}}
-                  whileTap={{scale:0.9}}
-                >
-                      About
-                </motion.h2>
-              </ABOUT>
+        <WORK to="/work" click={click}>
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Work
+          </motion.h2>
+        </WORK>
 
-              <Reference to="/skills">
-                <motion.h2 
-                  initial={{
-                    y:200,
-                    transition:{type:'spring', duration:1.5, delay:1}
-                  }}
-                  animate={{
-                    y:0,
-                    transition:{type:'spring', duration:1.5, delay:1}
-                  }}
-                  whileHover={{scale:1.2}}
-                  whileTap={{scale:0.9}}
-                >
-                    My Skills
-                </motion.h2>
-              </Reference>
-              </BottomBar>
-        </Container>
+        <BottomBar>
+          <ABOUT to="/about" click={click}>
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              About
+            </motion.h2>
+          </ABOUT>
 
-        {click ? <Profil click={click} /> : null}
+          <Reference to="/skills">
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              My Skills
+            </motion.h2>
+          </Reference>
+        </BottomBar>
+
+        {/* Mobile Layout - 800px altı için ayrı elementler */}
+        <ABOUT to="/about" click={click} className="mobile-about">
+          <motion.h2
+            initial={{
+              y: 200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            About
+          </motion.h2>
+        </ABOUT>
+
+        <Reference to="/skills" className="mobile-skills">
+          <motion.h2
+            initial={{
+              y: 200,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: "spring", duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            My Skills
+          </motion.h2>
+        </Reference>
+      </Container>
+
+      {click ? <Profil click={click} /> : null}
     </MainContainer>
-  )
-}
-
-export default Main
+  );
+};
+export default Main;

@@ -18,6 +18,11 @@ import AnaTitle from '../subComponents/AnaTitle';
   justify-content: space-evenly; 
   align-items: center;
 
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   
 
 `
@@ -40,6 +45,14 @@ import AnaTitle from '../subComponents/AnaTitle';
   &:hover {
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 60vw;
+    height: 30vh;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
   }
 
  

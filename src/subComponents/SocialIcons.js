@@ -8,24 +8,23 @@ import { motion } from 'framer-motion'
 
 
 const Icons = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${(props) => props.theme.text};
+  position: fixed;
+  bottom: 0;
+  left: 2rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: ${props => props.theme.text};
-    position: fixed;
-    bottom: 0;
-    left: 2rem;
-    
-    z-index: 3;
+  z-index: 3;
 
-    &>*:not(:last-child){
-            margin: 0.5rem 0;
-    }
-
-
-   
-`
+  & > *:not(:last-child) {
+    margin: 0.5rem 0;
+  }
+  @media screen and (max-width: 480px) {
+    left: 1rem;
+  }
+`;
  const Line = styled(motion.span)`
 
     width: 2px;

@@ -65,6 +65,12 @@ import uzayadami from '../assets/Images/spaceman.png';
     font-family: 'Ubuntu Mono', monospace; 
     font-style: italic;
 
+    @media screen and (max-width: 800px) {
+      left: 50%;
+      top: 50%;
+      transform: translate(-48%, -50%);
+    }
+
 
    
   `
