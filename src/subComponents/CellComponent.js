@@ -1,5 +1,5 @@
 import React from 'react'
-import Particles from 'react-particles-js'
+import Particles from 'react-tsparticles'
 import styled from 'styled-components' 
 
 // Hücreleri almak için Configden JSON ile gorusuyoruz
@@ -21,7 +21,7 @@ z-index: 0;
 const CellComponent = (props) => {
   return (
     <Box >
-        <Particles params={props.theme === "light" ? configLight : configDark} />
+        <Particles options={props.theme === "light" ? configLight : configDark} />
     </Box>
   )
 }
