@@ -161,7 +161,7 @@ const MySkillsPage = () => {
   </Description>
 </Main>
     
-        <AnaTitle text="About" top="80%" right="30%"/>
+        <AnaTitle text="My Skills" top="80%" right="30%"/>
       </Box>
 
       
