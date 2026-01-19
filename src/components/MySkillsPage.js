@@ -143,7 +143,7 @@ const MySkillsPage = () => {
   <Description>
     <strong>Skills</strong>
     <p>
-      Basic to intermediate knowledge of HTML, CSS, React, and C#
+      Basic to intermediate knowledge of HTML, CSS, JS, React, and C#
     </p>
     <p>
       Growing interest in web development and system logic
