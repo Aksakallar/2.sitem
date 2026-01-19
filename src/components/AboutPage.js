@@ -14,7 +14,7 @@ import uzayadami from '../assets/Images/spaceman.png';
     width: 100vw;
     height: 100vh;
     position: relative;
-    owerflow: hidden; 
+    overflow: hidden; 
     `
 
   const float = keyframes`

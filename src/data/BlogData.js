@@ -3,95 +3,124 @@ export const Blogs = [
     id: 1,
     name: "My Work on Blog Design",
     tags: ["React", "SASS", "UI Design"],
-    date: "April 23, 2025",
+    date: "October 3, 2025",
     imgSrc:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ32TQyWJ0OM17k2WKjhzaz9vPyphhtx6V23w&usqp=CAU",
     link: "",
-    description: `<div class="article-content"> 
- 
-      <p> In this blog design project, I aimed to build a clean, user-friendly, and fully responsive blogging platform interface from scratch. The project was a comprehensive exercise in combining modern front-end technologies—particularly <strong>React</strong> for component-based development and <strong>SASS</strong> for scalable and maintainable styling—with thoughtful UI/UX design principles. </p> 
-      <h3>Project Goals</h3> 
-      <p> The core objective was to create a visual layout that enhances content discovery and readability while maintaining aesthetic balance. I wanted users to easily navigate articles, engage with tags, and enjoy a seamless experience across desktop, tablet, and mobile devices. </p> 
-      <h3>Technologies Used</h3> 
-      <ul> 
-        <li><strong>React:</strong> Used to build reusable components like article cards, tag filters, pagination, and a responsive navigation bar.</li> 
-        <li><strong>SASS:</strong> Employed for nesting styles, using variables for color schemes, and building a modular CSS architecture.</li> 
-        <li><strong>React Router:</strong> Implemented to enable smooth client-side navigation between article pages and other sections.</li> 
-        <li><strong>CSS Animations:</strong> Integrated for subtle transitions to improve user experience.</li> 
-      </ul> 
-      <h3>Design Approach</h3> 
-      <p> I began by sketching wireframes to outline the layout. Once the structure was finalized, I created a design system that included: </p> 
-      <ul> 
-        <li>A clear typographic hierarchy using system and web-safe fonts.</li> 
-        <li>Consistent padding and spacing for visual balance.</li> 
-        <li>A flexible color palette that adapts well in both light and dark modes.</li> 
-        <li>Intuitive interaction feedback such as hover effects, active states, and transition animations.</li> 
-      </ul> 
-      <h3>UI Highlights</h3> 
-      <p> The homepage features a hero section, recent articles, and category tags for quick filtering. Article cards were designed to display titles, excerpts, dates, and thumbnail images clearly. On the article detail page, I included estimated reading time, social share buttons, and a comment section. </p> 
-      <p> The site structure was carefully planned to optimize both user flow and SEO. Semantic HTML elements were used where appropriate, and the site loads efficiently thanks to code splitting and image optimization techniques. </p> 
-      <h3>Challenges and Solutions</h3> 
-      <p> One of the major challenges was designing a layout that remains consistent across all screen sizes while keeping the interface engaging. I used CSS Grid and Flexbox strategically to manage layouts dynamically, ensuring optimal responsiveness. Additionally, managing global state for UI themes and tag-based filters required careful state management, which I handled using React's Context API. </p> 
-      <h3>Conclusion</h3> 
-      <p> This project not only strengthened my technical proficiency in front-end development but also deepened my understanding of user-centered design. It gave me valuable insights into how thoughtful design choices and efficient code structure come together to create an impactful web experience. I plan to continue improving this design by integrating a CMS like Strapi or Sanity in the future and exploring performance enhancements through lazy loading and server-side rendering. </p> 
-      <p> Overall, "My Work on Blog Design" was a rewarding experience that allowed me to merge creativity with engineering to build something functional and elegant. </p> 
+    description: `<div class="article-content">
+
+      <p>Hey there! Today I want to share one of my favorite projects with you. I worked on a blog design, and trust me, this journey was both challenging and incredibly fun. Those late nights coding while sipping my coffee... But the result? Totally worth it!</p>
+
+      <h3>So Why Did I Design a Blog?</h3>
+      <p>It all started with a simple question: <em>"What would a blog I'd actually enjoy using look like?"</em> I looked at templates out there, and most were either too complicated or too boring. I wanted something both stylish and easy to use. So I told myself: "You got this!"</p>
+
+      <h3>Technologies I Used</h3>
+      <p>In this project, I brought together modern web technologies:</p>
+      <ul>
+        <li><strong>React:</strong> Thanks to its component-based structure, I kept everything modular. Once I build a card component, I can use it everywhere!</li>
+        <li><strong>SASS:</strong> Writing CSS has never been this fun. Variables, nested styles... It's like magic!</li>
+        <li><strong>React Router:</strong> Page transitions became smooth as butter.</li>
+        <li><strong>Framer Motion:</strong> Small animations make a big difference, I learned that.</li>
+      </ul>
+
+      <h3>How Did the Design Process Go?</h3>
+      <p>First, I grabbed a pen and paper and sketched out my ideas. Yes, sometimes the best ideas are born in analog, not digital! Then I transferred these sketches to Figma and refined them.</p>
+      <p>Things I focused on in the design:</p>
+      <ul>
+        <li>Clean and minimal look - easy on the eyes</li>
+        <li>Readable typography - because blog means reading</li>
+        <li>Mobile responsiveness - everyone browses on their phone nowadays</li>
+        <li>Fast loading - nobody wants to wait, including me!</li>
+      </ul>
+
+      <h3>The Hardest Part</h3>
+      <p>Let me be honest: Responsive design gave me a hard time. Something that looks amazing on desktop can be a disaster on mobile. I spent hours with CSS Grid and Flexbox, but finally got a design that looks great on every screen size. I can't describe the joy I felt at that moment!</p>
+
+      <h3>What I Learned</h3>
+      <p>This project taught me so much:</p>
+      <ul>
+        <li>Patience - sometimes fixing a bug takes hours</li>
+        <li>Attention to detail - small things make a big difference</li>
+        <li>User-centered thinking - it's not about me, it's about the user</li>
+        <li>Never give up - every problem has a solution</li>
+      </ul>
+
+      <h3>Final Words</h3>
+      <p>I had fun and grew as a developer while working on this project. If you want to build something too, just start! You don't have to be perfect, you just have to begin. In the future, I'm planning to integrate a CMS into this design and add more features.</p>
+      <p>Feel free to reach out if you have any questions. See you in the next post!</p>
     </div>`,
   },
   {
     id: 2,
     name: "Developing My Personal Portfolio Page",
     tags: ["HTML", "CSS", "JavaScript"],
-    date: "April 26, 2025",
+    date: "September 22, 2025",
     imgSrc:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ32TQyWJ0OM17k2WKjhzaz9vPyphhtx6V23w&usqp=CAU",
-    link: `<div class="article-content">
+    link: "",
+    description: `<div class="article-content">
 
   <p>
-    My personal portfolio page is more than just a website—it's a reflection of my journey as a developer and designer. This project gave me the opportunity to showcase my skills, past works, and unique design perspective in a single digital space.
+    What if I told you that someone who worked with satellites, dealt cards in live casinos, and explored the world of network marketing ended up building a React portfolio? Sounds like a plot twist, right? Well, that's exactly my story. Grab a coffee — this one's interesting.
   </p>
 
-  <h3>Project Vision</h3>
+  <h3>The Unexpected Beginning</h3>
   <p>
-    The goal was to create a modern, responsive, and lightweight website that provides potential clients and employers with an immediate understanding of who I am, what I do, and how I can add value to their projects. I focused on clean design, smooth navigation, and clear presentation of content.
+    Ten years ago, if you'd told me I'd be learning JavaScript and building web applications with React, I probably would have laughed it off. My journey started with satellite technologies — I've always had a special fascination with electronic structures.
+  </p>
+  <p>
+    Over time, life pulled me into the fast-paced world of live casino operations, where every second is critical and precision means everything. Then came my encounter with multi-level marketing. Although that chapter ended in collapse, given my inexperience at the time, it taught me invaluable lessons about human relationships, communication, and the true meaning of persistence.
+  </p>
+  <p>
+    Here's the real surprise: all these different experiences were unknowingly preparing me for a field I never planned to enter — coding.
   </p>
 
-  <h3>Technologies Used</h3>
+  <h3>Why React? Why Now?</h3>
+  <p>
+    When I decided to build my portfolio, I didn't want just a static page. I wanted something alive, something that moves, breathes, and tells a story. That's when I discovered <strong>React</strong>. Component-based thinking? That reminded me of satellite systems — modular, reusable, efficient. It just clicked.
+  </p>
+
+  <h3>The Tech Stack Behind This Site</h3>
+  <p>Here's what powers this portfolio:</p>
   <ul>
-    <li><strong>HTML5:</strong> Used for building the structural foundation of the page with semantic elements to enhance accessibility and SEO.</li>
-    <li><strong>CSS3:</strong> Utilized for responsive layouts, animations, and styling. I used media queries and Flexbox/Grid to ensure the layout adapts to different devices.</li>
-    <li><strong>JavaScript:</strong> Added interactivity such as a dark/light mode toggle, animated scroll effects, a responsive navigation menu, and contact form validation.</li>
+    <li><strong>React 17.0.2:</strong> The heart of everything. Every section you see is a carefully crafted component.</li>
+    <li><strong>React Router DOM 5.2.0:</strong> Seamless navigation between pages — Home, About, Blog, Work, Skills — without page reloads. That smooth SPA experience!</li>
+    <li><strong>Styled Components 5.3.0:</strong> CSS-in-JS magic. Each component carries its own styles. No more messy CSS files!</li>
+    <li><strong>Framer Motion 4.1.17:</strong> Those smooth animations you see? Page transitions, hover effects, the floating spaceman — all Framer Motion.</li>
   </ul>
 
-  <h3>Design Philosophy</h3>
-  <p>
-    I chose a minimalist design with a focus on typography, spacing, and subtle animations. The homepage features a hero section with a brief intro and a call-to-action. Below that are sections for featured projects, skill sets, an about me area, and a contact form.
-  </p>
-
-  <h3>Interactive Features</h3>
+  <h3>The Little Details That Matter</h3>
+  <p>But wait, there's more under the hood:</p>
   <ul>
-    <li>Sticky navigation bar with smooth scroll to sections.</li>
-    <li>Animated skill bars and icons using CSS keyframes.</li>
-    <li>Dark/light mode toggle using localStorage to remember user preference.</li>
-    <li>Dynamic project showcase section that pulls data from a JSON array.</li>
+    <li><strong>TSParticles:</strong> That mesmerizing particle background? It's not just decoration — it represents the chaos of experiences that eventually formed a clear path.</li>
+    <li><strong>normalize.css:</strong> Because browsers are weird, and consistency matters.</li>
+    <li><strong>Light/Dark Themes:</strong> Different moods, different themes. Your choice.</li>
+    <li><strong>web-vitals:</strong> I track performance because speed matters. Nobody waits anymore.</li>
   </ul>
 
-  <h3>Challenges Faced</h3>
+  <h3>The Architecture</h3>
   <p>
-    One key challenge was ensuring cross-browser compatibility while maintaining performance. I optimized images using WebP formats and implemented lazy loading for media. I also paid close attention to accessibility, making sure that the site is navigable by keyboard and screen readers.
+    This isn't just a single page — it's an entire ecosystem:
+  </p>
+  <ul>
+    <li><strong>Dynamic Blog System:</strong> BlogData.js feeds all the posts you're reading. Easy to update, easy to scale.</li>
+    <li><strong>Work Gallery:</strong> WorkData.js showcases my projects. Add a new project? Just update the data file.</li>
+    <li><strong>Reusable Components:</strong> Cards, titles, social icons, logo — built once, used everywhere.</li>
+    <li><strong>Animated UI:</strong> Every interaction has feedback. Hover, click, scroll — it all responds.</li>
+  </ul>
+
+  <h3>What My Past Taught Me About Code</h3>
+  <p>
+    Here's the surprising part: my diverse background actually made me a better developer. Satellite systems taught me to think in modules. Casino operations taught me that timing and user experience are everything. MLM taught me that presentation matters. Now, when I write code, I'm not just writing functions — I'm crafting experiences.
   </p>
 
-  <h3>Mobile Optimization</h3>
+  <h3>The Plot Twist You Didn't Expect</h3>
   <p>
-    Mobile-first design was a priority. I ensured tap targets are large enough, used fluid typography, and optimized loading times on slow connections. The layout gracefully collapses into a single column on small screens, with interactive elements like menus and forms fully touch-optimized.
-  </p>
-
-  <h3>Conclusion</h3>
-  <p>
-    Developing this portfolio page was a rewarding experience that allowed me to apply my front-end knowledge in a real-world context. It not only serves as a hub for showcasing my work but also as a playground for experimenting with new design and development ideas. I plan to iterate on this project continuously, adding a blog, improving SEO, and integrating a CMS for dynamic content updates.
+    Remember when I said I believe anything crafted with heart and mind becomes art? This portfolio is my proof. It's not just a website — it's every late night of learning, every failed attempt, every "aha!" moment compiled into one place. The real twist? I'm just getting started.
   </p>
 
   <p>
-    You can view the live site soon via the link I’ll provide once deployed. Until then, feel free to check out screenshots and code snippets shared in my other posts.
+    So, what do you think? Did a casino dealer turned developer surprise you? Feel free to explore, connect with me through my social links, and stay tuned — the next chapter is being written right now.
   </p>
 </div>
 `,
@@ -100,13 +129,13 @@ export const Blogs = [
     id: 3,
     name: "Minimalist E-Commerce Interface Design",
     tags: ["Shopify", "Figma", "Design Thinking"],
-    date: "April 28, 2025",
+    date: "November 18, 2025",
     imgSrc:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ32TQyWJ0OM17k2WKjhzaz9vPyphhtx6V23w&usqp=CAU",
     link: "",
     description: `<div class="article-content">
   <h2>Minimalist E-Commerce Interface Design</h2>
-  <p><strong>Date:</strong> April 28, 2025</p>
+  <p><strong>Date:</strong> April 28, 2026</p>
   <p><strong>Tags:</strong> Shopify, Figma, Design Thinking</p>
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ32TQyWJ0OM17k2WKjhzaz9vPyphhtx6V23w&usqp=CAU" alt="Minimalist E-Commerce Interface" style="max-width:100%; height:auto; margin: 20px 0;" />
 
@@ -157,55 +186,5 @@ export const Blogs = [
   </p>
 </div>
 `,
-  },
-  {
-    id: 4,
-    name: "Dropshipping Product Listing Automation",
-    tags: ["JavaScript", "Automation", "E-Commerce"],
-    date: "May 2, 2025",
-    imgSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM1p8UhMuFyZbN3cf9qH4YkD_3wBTAqlDbFw&usqp=CAU",
-    link: "",
-    description: ``,
-  },
-  {
-    id: 5,
-    name: "A Simple and Fast About Page",
-    tags: ["Next.js", "Tailwind", "Responsive Design"],
-    date: "May 4, 2025",
-    imgSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu3yAF7XwhTA3im4vnMdQfG8BNlsOOSVbVSw&usqp=CAU",
-    link: "",
-    description: ``,
-  },
-  {
-    id: 6,
-    name: "Multi-Language Promotional Site Design",
-    tags: ["i18n", "React", "UX"],
-    date: "May 8, 2025",
-    imgSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkwfE7eMKh-oKve_rjZRD9XD4IfWmDi5q5sw&usqp=CAU",
-    link: "",
-    description: ``,
-  },
-  {
-    id: 7,
-    name: "Form Site Application",
-    tags: ["React", "Formik", "TailwindCSS"],
-    date: "May 10, 2025",
-    imgSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9nZp2p1Bg9QlweulOCcURe3Tj3lVgzrBuNg&usqp=CAU",
-    link: "",
-    description: ``,
-  },
-  {
-    id: 8,
-    name: "The Philosophy of Working in the Casino World: A Look at the Pros and Cons",
-    tags: ["React", "Formik", "TailwindCSS", "Philosophy", "Gambling"],
-    date: "May 10, 2025",
-    imgSrc:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9nZp2p1Bg9QlweulOCcURe3Tj3lVgzrBuNg&usqp=CAU",
-    link: "",
-    description: ``,
   },
 ];

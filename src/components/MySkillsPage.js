@@ -89,7 +89,7 @@ ${Main}:hover &{
 }
 
 strong{
-  margin-botton: 1rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
 }
 ul,p{
@@ -118,22 +118,16 @@ const MySkillsPage = () => {
   </Title>
 
   <Description>
-    I enjoy learning and designing meaningful things in my free time instead of wasting it.
+    I enjoy learning and creating purposeful designs in my free time, focusing on clarity rather than complexity.
   </Description>
 
   <Description>
-    <strong>I like to Design</strong>
+    <strong>I'm interested in designing</strong>
     <ul>
-      <li>Simple & Useful Websites</li>
-      <li>Social Media Visuals</li>
+      <li>Simple & functional websites</li>
+      <li>Clean social media visuals</li>
+      <li>Practical digital tools</li>
     </ul>
-  </Description>
-
-  <Description>
-    <strong>Tools</strong>
-    <p>
-      Canva, Adobe Illustrator, Figma
-    </p>
   </Description>
 </Main>
 
@@ -143,13 +137,16 @@ const MySkillsPage = () => {
   </Title>
 
   <Description>
-    I focus on learning by doing. I’m on a journey to build my own path in tech and entrepreneurship.
+    I learn by building and experimenting. I'm gradually developing my skills while exploring my own path in tech and entrepreneurship.
   </Description>
 
   <Description>
     <strong>Skills</strong>
     <p>
-      Basic knowledge of HTML, CSS, C#, and a growing interest in web technologies.
+      Basic to intermediate knowledge of HTML, CSS, React, and C#
+    </p>
+    <p>
+      Growing interest in web development and system logic
     </p>
   </Description>
 

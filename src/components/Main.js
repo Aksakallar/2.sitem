@@ -5,6 +5,7 @@ import styled, { keyframes } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
 import PowerButton from "../subComponents/PowerButton";
 import SocialIcons from "../subComponents/SocialIcons";
+import ContactModal from "../subComponents/ContactModal";
 import { CasinoChip } from "./AllSvgs";
 import Profil from "./Profil";
 
@@ -29,17 +30,21 @@ const MainContainer = styled.div`
 const Container = styled.div`
   padding: 2rem;
 `;
-const Contact = styled(NavLink)`
+const Contact = styled.button`
   color: ${(props) => props.theme.text};
   position: absolute;
   top: 2rem;
   right: calc(1rem + 2vw);
   text-decoration: none;
   z-index: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 `;
 
 const BLOG = styled(NavLink)`
-  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  color: ${(props) => props.theme.text};
   position: absolute;
   top: 50%;
   right: calc(1rem + 2vw);
@@ -153,7 +158,7 @@ const Center = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  aling-items: center;
+  align-items: center;
   transition: all 1s ease;
 
   & > :first-child {
@@ -194,6 +199,7 @@ const DarkDiv = styled.div`
 
 const Main = (props) => {
   const [click, setClick] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
 
   const handleClick = () => setClick(!click);
 
@@ -216,7 +222,7 @@ const Main = (props) => {
           <span>click here</span>
         </Center>
 
-        <Contact target="_blank" to={{ pathname: "mailto:aksaka7@gmail.com" }}>
+        <Contact onClick={() => setContactOpen(true)}>
           <motion.h2
             initial={{
               y: -200,
@@ -229,7 +235,7 @@ const Main = (props) => {
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
           >
-            E-mail
+            Contact
           </motion.h2>
         </Contact>
 
@@ -340,6 +346,8 @@ const Main = (props) => {
       </Container>
 
       {click ? <Profil click={click} /> : null}
+
+      <ContactModal isOpen={contactOpen} onClose={() => setContactOpen(false)} />
     </MainContainer>
   );
 };

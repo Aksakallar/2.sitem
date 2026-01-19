@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 
 import music from "../assets/audio/Al 1de Burdan Yak.mp3";
@@ -55,6 +55,71 @@ const play = keyframes`  0% {
   }
 `;
 
+const arrowBounce = keyframes`
+  0%, 100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+`;
+
+const arrowBounceMobile = keyframes`
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  50% {
+    transform: rotate(0deg) translateY(-8px);
+  }
+`;
+
+const ArrowIndicator = styled.div`
+  position: fixed;
+  left: 11rem;
+  top: 4rem;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: ${arrowBounce} 1s ease-in-out infinite;
+  pointer-events: none;
+
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #000000;
+  }
+
+  &::after {
+    content: '';
+    width: 4px;
+    height: 25px;
+    background-color: #000000;
+    border-radius: 2px;
+  }
+
+  @media screen and (max-width: 800px) {
+    left: 7rem;
+    top: 4rem;
+    animation: ${arrowBounceMobile} 1s ease-in-out infinite;
+  }
+
+  @media screen and (max-width: 500px) {
+    left: 6rem;
+    top: 4.5rem;
+    animation: ${arrowBounceMobile} 1s ease-in-out infinite;
+  }
+
+  @media screen and (max-width: 400px) {
+    left: 5rem;
+    top: 4.5rem;
+    animation: ${arrowBounceMobile} 1s ease-in-out infinite;
+  }
+`;
+
 const Line = styled.span`
   background: ${(props) => props.theme.text};
   border: 1px solid ${(props) => props.theme.body};
@@ -69,9 +134,27 @@ const Line = styled.span`
 const Sesbar = () => {
   const ref = useRef(null);
   const [click, setClick] = useState(false);
+  const [showArrow, setShowArrow] = useState(true);
+  const [hasInteracted, setHasInteracted] = useState(() => {
+    return localStorage.getItem('musicBoxClicked') === 'true';
+  });
+
+  useEffect(() => {
+    if (!hasInteracted) {
+      const timer = setTimeout(() => {
+        setShowArrow(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [hasInteracted]);
 
   const handClick = () => {
     setClick(!click);
+
+    if (!hasInteracted) {
+      localStorage.setItem('musicBoxClicked', 'true');
+      setHasInteracted(true);
+    }
 
     if (!click) {
       ref.current.play();
@@ -81,14 +164,17 @@ const Sesbar = () => {
   };
 
   return (
-    <Box onClick={handClick}>
-      <Line click={click} />
-      <Line click={click} />
-      <Line click={click} />
-      <Line click={click} />
-      <Line click={click} />
-      <audio src={music} ref={ref} loop />
-    </Box>
+    <>
+      {!hasInteracted && showArrow && <ArrowIndicator />}
+      <Box onClick={handClick}>
+        <Line click={click} />
+        <Line click={click} />
+        <Line click={click} />
+        <Line click={click} />
+        <Line click={click} />
+        <audio src={music} ref={ref} loop />
+      </Box>
+    </>
   );
 };
 
