@@ -28,18 +28,18 @@ import {Work} from "../data/WorkData"
     const Main = styled(motion.ul)`
 
     position: fixed;
-    top: 12rem; 
+    top: 12rem;
     left: calc(10rem + 15vw);
-    height: 80vh; 
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     color: white;
 
     @media screen and (max-width: 800px) {
-      left: 20%;
-      transform: translateX(-20%);
+      left: 100%;
+      transform: translateX(0);
       width: 90vw;
       height: 40vh;
       gap: 0.5rem;
