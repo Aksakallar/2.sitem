@@ -14,8 +14,8 @@ export const Work = [
         description:"Restaurant reservation and food delivery system built with Next.js.",
         tags:["nextjs","react","restaurant","booking"],
 
-        demo:"https://foodtra.netlify.app/",
-        github:"https://github.com/Aksaka7/food-market"
+        demo:"https://foodtrack-frontend.vercel.app/",
+        github:"https://github.com/Aksaka7/MehmetTruckBack-end"
     },
 
 
