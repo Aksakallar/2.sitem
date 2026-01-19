@@ -153,7 +153,7 @@ const MySkillsPage = () => {
   <Description>
     <strong>Tools</strong>
     <p>
-      Visual Studio, GitHub, Shopify, Trello
+      Visual Studio, GitHub, Trello
     </p>
   </Description>
 </Main>
