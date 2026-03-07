@@ -56,10 +56,12 @@ const Grid = styled.div`
     grid-template-columns: 1fr;
     grid-gap: 1.5rem;
     max-width: 400px;
+    justify-items: center;
   }
 
   @media screen and (max-width: 480px) {
     max-width: 320px;
+    justify-items: center;
   }
 `;
 

@@ -24,19 +24,29 @@ const Icons = styled.div`
   @media screen and (max-width: 480px) {
     left: 1rem;
   }
+  @media screen and (max-width: 800px) {
+    ${props => props.click && `
+      svg path {
+        fill: ${DarkTheme.body} !important;
+      }
+    `}
+  }
 `;
  const Line = styled(motion.span)`
 
     width: 2px;
     height: 8rem;
-    background-color: ${props => props.color === "dark" ?  DarkTheme.text : DarkTheme.body }
+    background-color: ${props => props.color === "dark" ?  DarkTheme.text : DarkTheme.body };
 
+    @media screen and (max-width: 800px) {
+      background-color: ${props => props.click ? DarkTheme.body : (props.color === "dark" ? DarkTheme.text : DarkTheme.body)};
+    }
  `
 
 
 const SocialIcons = (props) => {
   return (
-    <Icons>
+    <Icons click={props.click}>
         
         <motion.div 
             initial={{transition:"scale(0)"}}
@@ -70,7 +80,7 @@ const SocialIcons = (props) => {
             </NavLink>
         </motion.div>
 
-        <Line color={props.theme} 
+        <Line color={props.theme} click={props.click}
             initial={{
                 height:0
             }}

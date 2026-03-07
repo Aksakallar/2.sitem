@@ -93,13 +93,11 @@ const AboutPage = () => {
         </Spaceman>
 
         <Main>
-
-              I plan to improve my skills through my own experiences and reach my goals by continuously gaining new insights.
-  <br/><br/>
-  My roadmap includes knowledge from various fields such as Satellite Technology, Live Casino Operations, Multi-Level Marketing, and ultimately, the Software Industry. I aim to build my future using the experiences I gain along the way. I enjoy reading books, doing research, and surprising people with what I create.
-  <br/><br/>
-  I believe that anything crafted with both heart and mind can become a work of art. I envision and design my future with passion and creativity. Feel free to connect with me through my social links!
-    
+          I plan to improve my skills through my own experiences and reach my goals by continuously gaining new insights.
+          <br/><br/>
+          My roadmap includes knowledge from various fields such as Satellite Technology, Live Casino Operations, Multi-Level Marketing, and ultimately, the Software Industry. I aim to build my future using the experiences I gain along the way. I enjoy reading books, doing research, and surprising people with what I create.
+          <br/><br/>
+          I believe that anything crafted with both heart and mind can become a work of art. I envision and design my future with passion and creativity. Feel free to connect with me through my social links!
         </Main>
 
         <AnaTitle text="About" top="10%" left="5%"/>

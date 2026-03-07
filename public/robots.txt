@@ -1,3 +1,11 @@
+# robots.txt - mehmetasker.com
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap location
+Sitemap: https://mehmetasker.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

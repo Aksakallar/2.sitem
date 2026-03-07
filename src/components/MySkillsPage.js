@@ -36,7 +36,7 @@ import AnaTitle from '../subComponents/AnaTitle';
   z-index: 3;
   line-height: 1.5;
   cursor: pointer;
-  overflow-y: auto;
+  overflow-y: hidden;
 
   font-family: 'Ubuntu Mono' ,monospace;
   display: flex;
@@ -49,11 +49,13 @@ import AnaTitle from '../subComponents/AnaTitle';
   }
 
   @media screen and (max-width: 800px) {
-    width: 60vw;
-    height: 30vh;
+    width: 70vw;
+    height: auto;
+    min-height: 35vh;
     padding: 1rem;
     margin-top: 1rem;
     margin-left: 1rem;
+    overflow-y: hidden;
   }
 
 
@@ -61,7 +63,7 @@ import AnaTitle from '../subComponents/AnaTitle';
 
 const Title = styled.h2`
 
-display: flex; 
+display: flex;
 justify-content: center;
 align-items: center;
 font-size: calc(1em + 1vw);
@@ -75,6 +77,10 @@ ${Main}:hover &{
       margin-right: 1rem;
 }
 
+@media screen and (max-width: 800px) {
+  font-size: calc(0.8em + 0.8vw);
+}
+
 `
 
 const Description = styled.div`
@@ -84,7 +90,7 @@ font-size: calc(0.6em + 1vw);
 padding: 0.5rem 0;
 
 ${Main}:hover &{
-  
+
     color:${props => props.theme.body};
 
 }
@@ -97,6 +103,14 @@ ul,p{
   margin-left: 2rem;
 }
 
+@media screen and (max-width: 800px) {
+  font-size: calc(0.4em + 0.8vw);
+  padding: 0.3rem 0;
+
+  ul,p {
+    margin-left: 1rem;
+  }
+}
 
 `
 

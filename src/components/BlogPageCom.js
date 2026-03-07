@@ -3,7 +3,11 @@ import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const Container = styled(motion.div)``;
+const Container = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
 
 const Box = styled(motion(NavLink))`
   width: 100%;
@@ -32,14 +36,15 @@ const Box = styled(motion(NavLink))`
   }
 
   @media screen and (max-width: 768px) {
-    width: 100%;
-    max-width: 100%;
-    min-width: 250px;
-    min-height: 350px;
+    width: 90%;
+    max-width: 280px;
+    min-width: 220px;
+    min-height: 320px;
     padding: 1rem;
   }
 
   @media screen and (max-width: 480px) {
+    max-width: 260px;
     min-width: 200px;
     padding: 0.8rem;
   }

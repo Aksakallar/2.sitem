@@ -1,0 +1,2588 @@
+================================================================================
+                    MEHMET ASKER - SEO PANEL & GELİŞTİRME TAKİP
+                              mehmetasker.com
+================================================================================
+
+Son Güncelleme: 2026-02-04
+
+################################################################################
+#                                                                              #
+#                         SAYFA BAZLI SEO YÖNETİMİ                             #
+#                                                                              #
+################################################################################
+
+================================================================================
+                    SAYFA 1: ANA SAYFA (/)
+================================================================================
+URL                 : https://mehmetasker.com/
+Priority            : 1.0
+Sitemap             : [x] Eklendi
+Durum               : [x] Aktif
+
+[META TAGS]
+-----------
+title               : Mehmet Asker | Kişisel Gelişim, Yaşam Koçluğu & Yazılım
+description         : Mehmet Asker - Kişisel gelişim, yaşam koçluğu, yazarlık ve yazılım geliştirme alanlarında üretken ve vizyon odaklı kişisel marka.
+keywords            : Mehmet Asker, kişisel gelişim, yaşam koçluğu, life coach, yazarlık, yazılım geliştirme, motivasyon
+author              : Mehmet Asker
+robots              : index, follow
+canonical           : https://mehmetasker.com/
+
+[OPEN GRAPH]
+------------
+og:type             : website
+og:url              : https://mehmetasker.com/
+og:title            : Mehmet Asker | Kişisel Gelişim, Yaşam Koçluğu & Yazılım
+og:description      : Kişisel gelişim, yaşam koçluğu, yazarlık ve yazılım geliştirme alanlarında üretken ve vizyon odaklı kişisel marka.
+og:image            : https://mehmetasker.com/og-image.jpg
+og:locale           : tr_TR
+
+[TWITTER CARD]
+--------------
+twitter:card        : summary_large_image
+twitter:title       : Mehmet Asker | Kişisel Gelişim, Yaşam Koçluğu & Yazılım
+twitter:description : Kişisel gelişim, yaşam koçluğu, yazarlık ve yazılım geliştirme alanlarında üretken ve vizyon odaklı kişisel marka.
+twitter:image       : https://mehmetasker.com/og-image.jpg
+
+[STRUCTURED DATA]
+-----------------
+@type               : Person
+Schema Durumu       : [x] Eklendi
+
+[GÖREVLER]
+----------
+[ ] og-image.jpg oluştur
+[ ] Sayfa hız optimizasyonu
+
+
+================================================================================
+                    SAYFA 2: HAKKIMDA (/about)
+================================================================================
+URL                 : https://mehmetasker.com/about
+Priority            : 0.9
+Sitemap             : [x] Eklendi
+Durum               : [x] Aktif
+
+[META TAGS]
+-----------
+title               : Hakkımda | Mehmet Asker
+description         : Mehmet Asker hakkında. Kişisel gelişim, yaşam koçluğu ve yazılım geliştirme alanlarında deneyim ve vizyon.
+keywords            : Mehmet Asker hakkında, yaşam koçu, yazar, yazılım geliştirici, biyografi
+author              : Mehmet Asker
+robots              : index, follow
+canonical           : https://mehmetasker.com/about
+
+[OPEN GRAPH]
+------------
+og:type             : profile
+og:url              : https://mehmetasker.com/about
+og:title            : Hakkımda | Mehmet Asker
+og:description      : Mehmet Asker hakkında. Kişisel gelişim, yaşam koçluğu ve yazılım geliştirme alanlarında deneyim ve vizyon.
+og:image            : https://mehmetasker.com/about-og.jpg
+
+[TWITTER CARD]
+--------------
+twitter:card        : summary_large_image
+twitter:title       : Hakkımda | Mehmet Asker
+twitter:description : Mehmet Asker hakkında. Kişisel gelişim, yaşam koçluğu ve yazılım geliştirme alanlarında deneyim ve vizyon.
+twitter:image       : https://mehmetasker.com/about-og.jpg
+
+[STRUCTURED DATA]
+-----------------
+@type               : AboutPage
+Schema Durumu       : [ ] Eklenmedi
+
+[GÖREVLER]
+----------
+[ ] about-og.jpg oluştur (1200x630 px)
+[ ] Dinamik meta tag ekle (react-helmet)
+[ ] AboutPage schema ekle
+
+
+================================================================================
+                    SAYFA 3: BLOG LİSTESİ (/blog)
+================================================================================
+URL                 : https://mehmetasker.com/blog
+Priority            : 0.8
+Sitemap             : [x] Eklendi
+Durum               : [x] Aktif
+
+[META TAGS]
+-----------
+title               : Blog | Mehmet Asker
+description         : Kişisel gelişim, motivasyon, farkındalık ve yazılım üzerine blog yazıları. Mehmet Asker'in düşünceleri ve deneyimleri.
+keywords            : blog, kişisel gelişim yazıları, motivasyon, farkındalık, yazılım blog
+author              : Mehmet Asker
+robots              : index, follow
+canonical           : https://mehmetasker.com/blog
+
+[OPEN GRAPH]
+------------
+og:type             : website
+og:url              : https://mehmetasker.com/blog
+og:title            : Blog | Mehmet Asker
+og:description      : Kişisel gelişim, motivasyon, farkındalık ve yazılım üzerine blog yazıları.
+og:image            : https://mehmetasker.com/blog-og.jpg
+
+[TWITTER CARD]
+--------------
+twitter:card        : summary_large_image
+twitter:title       : Blog | Mehmet Asker
+twitter:description : Kişisel gelişim, motivasyon, farkındalık ve yazılım üzerine blog yazıları.
+twitter:image       : https://mehmetasker.com/blog-og.jpg
+
+[STRUCTURED DATA]
+-----------------
+@type               : Blog
+Schema Durumu       : [ ] Eklenmedi
+
+[GÖREVLER]
+----------
+[ ] blog-og.jpg oluştur (1200x630 px)
+[ ] Dinamik meta tag ekle (react-helmet)
+[ ] Blog schema ekle
+[ ] BlogPosting schema her yazı için
+
+
+================================================================================
+                    SAYFA 4: BLOG DETAY (/blog/:id) - DİNAMİK
+================================================================================
+URL Yapısı          : https://mehmetasker.com/blog/{id}
+Priority            : 0.7
+Sitemap             : [ ] Dinamik eklenmeli
+Durum               : [ ] Dinamik SEO gerekli
+
+[META TAGS - DİNAMİK]
+---------------------
+title               : {blog.name} | Mehmet Asker Blog
+description         : {blog.description} (ilk 160 karakter)
+keywords            : {blog.tags.join(', ')}
+author              : Mehmet Asker
+robots              : index, follow
+canonical           : https://mehmetasker.com/blog/{id}
+
+[OPEN GRAPH - DİNAMİK]
+----------------------
+og:type             : article
+og:url              : https://mehmetasker.com/blog/{id}
+og:title            : {blog.name}
+og:description      : {blog.description}
+og:image            : {blog.imgSrc}
+og:article:author   : Mehmet Asker
+og:article:published_time : {blog.date}
+
+[TWITTER CARD - DİNAMİK]
+------------------------
+twitter:card        : summary_large_image
+twitter:title       : {blog.name}
+twitter:description : {blog.description}
+twitter:image       : {blog.imgSrc}
+
+[STRUCTURED DATA - DİNAMİK]
+---------------------------
+@type               : BlogPosting / Article
+headline            : {blog.name}
+datePublished       : {blog.date}
+author              : Mehmet Asker
+image               : {blog.imgSrc}
+
+[GÖREVLER]
+----------
+[ ] react-helmet kurulumu
+[ ] BlogDetail.js'e dinamik meta tag ekle
+[ ] Her blog için sitemap generator
+[ ] Article schema implementasyonu
+
+
+================================================================================
+                    SAYFA 5: PROJELER LİSTESİ (/work)
+================================================================================
+URL                 : https://mehmetasker.com/work
+Priority            : 0.8
+Sitemap             : [x] Eklendi
+Durum               : [x] Aktif
+
+[META TAGS]
+-----------
+title               : Projeler | Mehmet Asker
+description         : Mehmet Asker'in gerçekleştirdiği yazılım projeleri ve çalışmaları. Web geliştirme, uygulama ve dijital çözümler.
+keywords            : projeler, yazılım projeleri, web geliştirme, portfolio, Mehmet Asker projeleri
+author              : Mehmet Asker
+robots              : index, follow
+canonical           : https://mehmetasker.com/work
+
+[OPEN GRAPH]
+------------
+og:type             : website
+og:url              : https://mehmetasker.com/work
+og:title            : Projeler | Mehmet Asker
+og:description      : Mehmet Asker'in gerçekleştirdiği yazılım projeleri ve çalışmaları.
+og:image            : https://mehmetasker.com/work-og.jpg
+
+[TWITTER CARD]
+--------------
+twitter:card        : summary_large_image
+twitter:title       : Projeler | Mehmet Asker
+twitter:description : Mehmet Asker'in gerçekleştirdiği yazılım projeleri ve çalışmaları.
+twitter:image       : https://mehmetasker.com/work-og.jpg
+
+[STRUCTURED DATA]
+-----------------
+@type               : CollectionPage
+Schema Durumu       : [ ] Eklenmedi
+
+[GÖREVLER]
+----------
+[ ] work-og.jpg oluştur (1200x630 px)
+[ ] Dinamik meta tag ekle
+[ ] CollectionPage schema ekle
+
+
+================================================================================
+                    SAYFA 6: PROJE DETAY (/work/:id) - DİNAMİK
+================================================================================
+URL Yapısı          : https://mehmetasker.com/work/{id}
+Priority            : 0.8
+Sitemap             : [ ] Dinamik eklenmeli
+Durum               : [ ] Dinamik SEO gerekli
+
+[META TAGS - DİNAMİK]
+---------------------
+title               : {project.name} | Mehmet Asker Projeler
+description         : {project.description}
+keywords            : {project.tags.join(', ')}, proje, yazılım
+author              : Mehmet Asker
+robots              : index, follow
+canonical           : https://mehmetasker.com/work/{id}
+
+[OPEN GRAPH - DİNAMİK]
+----------------------
+og:type             : article
+og:url              : https://mehmetasker.com/work/{id}
+og:title            : {project.name}
+og:description      : {project.description}
+og:image            : {project.imgSrc}
+
+[TWITTER CARD - DİNAMİK]
+------------------------
+twitter:card        : summary_large_image
+twitter:title       : {project.name}
+twitter:description : {project.description}
+twitter:image       : {project.imgSrc}
+
+[STRUCTURED DATA - DİNAMİK]
+---------------------------
+@type               : SoftwareApplication / CreativeWork
+name                : {project.name}
+description         : {project.description}
+author              : Mehmet Asker
+
+[GÖREVLER]
+----------
+[ ] WorkPage detay component oluştur
+[ ] Dinamik meta tag ekle
+[ ] SoftwareApplication schema ekle
+
+
+================================================================================
+                    SAYFA 7: YETENEKLER (/skills)
+================================================================================
+URL                 : https://mehmetasker.com/skills
+Priority            : 0.7
+Sitemap             : [x] Eklendi
+Durum               : [x] Aktif
+
+[META TAGS]
+-----------
+title               : Yetenekler | Mehmet Asker
+description         : Mehmet Asker'in teknik yetenekleri. Tasarım, yazılım geliştirme, C#, ASP.NET, React ve web teknolojileri.
+keywords            : yetenekler, skills, C#, ASP.NET, React, web geliştirme, tasarım
+author              : Mehmet Asker
+robots              : index, follow
+canonical           : https://mehmetasker.com/skills
+
+[OPEN GRAPH]
+------------
+og:type             : website
+og:url              : https://mehmetasker.com/skills
+og:title            : Yetenekler | Mehmet Asker
+og:description      : Mehmet Asker'in teknik yetenekleri. Tasarım, yazılım geliştirme ve web teknolojileri.
+og:image            : https://mehmetasker.com/skills-og.jpg
+
+[TWITTER CARD]
+--------------
+twitter:card        : summary_large_image
+twitter:title       : Yetenekler | Mehmet Asker
+twitter:description : Mehmet Asker'in teknik yetenekleri. Tasarım, yazılım geliştirme ve web teknolojileri.
+twitter:image       : https://mehmetasker.com/skills-og.jpg
+
+[STRUCTURED DATA]
+-----------------
+@type               : ItemList (Skill list)
+Schema Durumu       : [ ] Eklenmedi
+
+[GÖREVLER]
+----------
+[ ] skills-og.jpg oluştur (1200x630 px)
+[ ] Dinamik meta tag ekle
+[ ] ItemList schema ekle
+
+
+================================================================================
+                    SAYFA 8: MÜZİK LİSTESİ (/muzik/:id) - DİNAMİK
+================================================================================
+URL Yapısı          : https://mehmetasker.com/muzik/{id}
+Priority            : 0.5
+Sitemap             : [ ] Dinamik eklenmeli
+Durum               : [ ] Sayfa oluşturulmalı
+
+[META TAGS - DİNAMİK]
+---------------------
+title               : {music.name} | Mehmet Asker Müzik
+description         : {music.description}
+keywords            : müzik, {music.artist}, {music.genre}
+author              : Mehmet Asker
+robots              : index, follow
+canonical           : https://mehmetasker.com/muzik/{id}
+
+[OPEN GRAPH - DİNAMİK]
+----------------------
+og:type             : music.song
+og:url              : https://mehmetasker.com/muzik/{id}
+og:title            : {music.name}
+og:description      : {music.description}
+og:audio            : {music.audioSrc}
+og:image            : {music.coverImage}
+
+[TWITTER CARD - DİNAMİK]
+------------------------
+twitter:card        : player
+twitter:title       : {music.name}
+twitter:description : {music.description}
+twitter:player      : {music.playerUrl}
+twitter:image       : {music.coverImage}
+
+[STRUCTURED DATA - DİNAMİK]
+---------------------------
+@type               : MusicRecording
+name                : {music.name}
+duration            : {music.duration}
+byArtist            : {music.artist}
+
+[GÖREVLER]
+----------
+[ ] Müzik sayfası component oluştur
+[ ] Müzik data dosyası oluştur
+[ ] Audio player implementasyonu
+[ ] MusicRecording schema ekle
+[ ] Sitemap'e dinamik ekleme
+
+
+################################################################################
+#                                                                              #
+#                         GENEL SEO GÖREV LİSTESİ                              #
+#                                                                              #
+################################################################################
+
+================================================================================
+                         1. REACT-HELMET KURULUMU
+================================================================================
+Durum: [ ] Yapılmadı
+
+Adımlar:
+  1. [ ] npm install react-helmet
+  2. [ ] App.js'e Helmet import et
+  3. [ ] Her sayfa için Helmet component ekle
+  4. [ ] Dinamik sayfalar için props ile meta geçir
+
+Kod Örneği:
+-----------
+import { Helmet } from 'react-helmet';
+
+<Helmet>
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription} />
+  <meta property="og:title" content={pageTitle} />
+  ...
+</Helmet>
+
+
+================================================================================
+                         2. DİNAMİK SİTEMAP OLUŞTURMA
+================================================================================
+Durum: [ ] Yapılmadı
+
+Statik Sayfalar (Mevcut):
+  [x] /
+  [x] /about
+  [x] /blog
+  [x] /work
+  [x] /skills
+
+Dinamik Sayfalar (Eklenecek):
+  [ ] /blog/:id - Tüm blog yazıları
+  [ ] /work/:id - Tüm projeler
+  [ ] /muzik/:id - Tüm müzikler
+
+Çözüm Yolları:
+  1. Build sırasında sitemap generate et
+  2. Backend API ile dinamik sitemap
+  3. react-sitemap paketi kullan
+
+
+================================================================================
+                         3. GÖRSEL OPTİMİZASYONU
+================================================================================
+
+[OG IMAGE LİSTESİ]
+------------------
+Dosya Adı           Boyut           Sayfa               Durum
+--------------------------------------------------------------------------------
+og-image.jpg        1200x630 px     Ana Sayfa           [ ] Oluşturulacak
+about-og.jpg        1200x630 px     Hakkımda            [ ] Oluşturulacak
+blog-og.jpg         1200x630 px     Blog                [ ] Oluşturulacak
+work-og.jpg         1200x630 px     Projeler            [ ] Oluşturulacak
+skills-og.jpg       1200x630 px     Yetenekler          [ ] Oluşturulacak
+
+Tasarım Önerileri:
+  - Marka renkleri kullan
+  - İsim ve başlık net görünsün
+  - Profesyonel görünüm
+  - Okunabilir font
+
+
+================================================================================
+                         4. STRUCTURED DATA ŞEMALARI
+================================================================================
+
+[KULLANILACAK ŞEMALAR]
+----------------------
+Şema Tipi           Sayfa               Durum
+--------------------------------------------------------------------------------
+Person              Ana Sayfa           [x] Eklendi
+AboutPage           /about              [ ] Eklenecek
+Blog                /blog               [ ] Eklenecek
+BlogPosting         /blog/:id           [ ] Eklenecek
+CollectionPage      /work               [ ] Eklenecek
+SoftwareApplication /work/:id           [ ] Eklenecek
+ItemList            /skills             [ ] Eklenecek
+MusicRecording      /muzik/:id          [ ] Eklenecek
+
+
+================================================================================
+                         5. PERFORMANS & TEKNİK SEO
+================================================================================
+
+[KONTROL LİSTESİ]
+-----------------
+[ ] Lazy loading (görseller için)
+[ ] Code splitting
+[ ] Gzip/Brotli sıkıştırma
+[ ] Browser caching
+[ ] CDN kullanımı
+[ ] Critical CSS
+[ ] Font optimizasyonu
+[ ] Core Web Vitals (LCP, FID, CLS)
+
+
+################################################################################
+#                                                                              #
+#                              TAMAMLANAN İŞLER                                #
+#                                                                              #
+################################################################################
+
+[2026-02-04]
+------------
+[x] index.html SEO meta tagları eklendi
+[x] Open Graph tagları eklendi
+[x] Twitter Card tagları eklendi
+[x] JSON-LD structured data (Person) eklendi
+[x] robots.txt güncellendi
+[x] sitemap.xml oluşturuldu (5 statik sayfa)
+[x] manifest.json Türkçe güncellendi
+[x] Sosyal medya ikonları güncellendi (X logosu)
+[x] Mobil responsive düzenlemeler yapıldı
+[x] JSON-LD'ye sosyal medya linkleri eklendi (Facebook, X, Instagram)
+
+
+################################################################################
+#                                                                              #
+#                              ÖNCELİK SIRASI                                  #
+#                                                                              #
+################################################################################
+
+1. [YÜKSEK] og-image.jpg oluştur
+2. [YÜKSEK] react-helmet kurulumu
+3. [YÜKSEK] Dinamik sayfalara meta tag ekle
+4. [ORTA]   Diğer OG görselleri oluştur
+5. [ORTA]   Structured data şemaları ekle
+6. [ORTA]   Dinamik sitemap oluştur
+7. [DÜŞÜK]  Müzik sayfası implementasyonu
+8. [DÜŞÜK]  Performans optimizasyonu
+
+################################################################################
+#                                                                              #
+#                    C# BACKEND - ENTITY YAPISI (SEO PANEL)                    #
+#                                                                              #
+################################################################################
+
+================================================================================
+                         DATABASE ŞEMASI (Entity Framework)
+================================================================================
+
+Veritabanı          : SQL Server / PostgreSQL
+ORM                 : Entity Framework Core
+Mimari              : Clean Architecture
+API                 : ASP.NET Core Web API
+
+================================================================================
+                              ENTITY 1: Page
+================================================================================
+Açıklama: Ana sayfa entity'si - Tüm sayfaların temel bilgilerini tutar
+
+public class Page
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Temel Bilgiler
+    public string Name { get; set; }              // Sayfa adı (örn: "Ana Sayfa")
+    public string Slug { get; set; }              // URL slug (örn: "about", "blog")
+    public string Url { get; set; }               // Tam URL
+    public PageType PageType { get; set; }        // Sayfa tipi (enum)
+
+    // SEO Ayarları
+    public double Priority { get; set; }          // Sitemap priority (0.0 - 1.0)
+    public bool IsInSitemap { get; set; }         // Sitemap'te var mı?
+    public bool IsDynamic { get; set; }           // Dinamik sayfa mı?
+    public bool IsActive { get; set; }            // Aktif mi?
+
+    // Zaman Damgaları
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+
+    // Navigation Properties
+    public MetaTag MetaTag { get; set; }
+    public OpenGraph OpenGraph { get; set; }
+    public TwitterCard TwitterCard { get; set; }
+    public StructuredData StructuredData { get; set; }
+    public SitemapEntry SitemapEntry { get; set; }
+}
+
+// Sayfa Tipi Enum
+public enum PageType
+{
+    Home = 0,           // Ana Sayfa
+    About = 1,          // Hakkımda
+    Blog = 2,           // Blog Listesi
+    BlogDetail = 3,     // Blog Detay (Dinamik)
+    Work = 4,           // Projeler Listesi
+    WorkDetail = 5,     // Proje Detay (Dinamik)
+    Skills = 6,         // Yetenekler
+    Music = 7,          // Müzik (Dinamik)
+    Contact = 8,        // İletişim
+    Custom = 99         // Özel Sayfa
+}
+
+================================================================================
+                              ENTITY 2: MetaTag
+================================================================================
+Açıklama: Sayfa meta tag bilgilerini tutar
+
+public class MetaTag
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Foreign Key
+    public int PageId { get; set; }
+
+    // Meta Tag Bilgileri
+    public string Title { get; set; }             // <title> tag
+    public string Description { get; set; }       // meta description (max 160)
+    public string Keywords { get; set; }          // meta keywords (virgülle ayrılmış)
+    public string Author { get; set; }            // meta author
+    public string Robots { get; set; }            // meta robots (index, follow vb.)
+    public string CanonicalUrl { get; set; }      // canonical URL
+    public string Viewport { get; set; }          // viewport (varsayılan değer)
+    public string Charset { get; set; }           // charset (varsayılan: UTF-8)
+    public string Language { get; set; }          // html lang attribute
+
+    // Ek Meta Taglar (JSON olarak)
+    public string AdditionalTags { get; set; }    // Ek özel meta taglar (JSON)
+
+    // Navigation Property
+    public Page Page { get; set; }
+}
+
+================================================================================
+                              ENTITY 3: OpenGraph
+================================================================================
+Açıklama: Open Graph (Facebook/LinkedIn) meta bilgilerini tutar
+
+public class OpenGraph
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Foreign Key
+    public int PageId { get; set; }
+
+    // Open Graph Bilgileri
+    public string OgType { get; set; }            // website, article, profile, music.song
+    public string OgUrl { get; set; }             // og:url
+    public string OgTitle { get; set; }           // og:title
+    public string OgDescription { get; set; }     // og:description
+    public string OgImage { get; set; }           // og:image (1200x630 px)
+    public string OgImageAlt { get; set; }        // og:image:alt
+    public int? OgImageWidth { get; set; }        // og:image:width
+    public int? OgImageHeight { get; set; }       // og:image:height
+    public string OgLocale { get; set; }          // og:locale (tr_TR)
+    public string OgSiteName { get; set; }        // og:site_name
+
+    // Article Spesifik (Blog için)
+    public string ArticleAuthor { get; set; }     // article:author
+    public DateTime? ArticlePublishedTime { get; set; }  // article:published_time
+    public DateTime? ArticleModifiedTime { get; set; }   // article:modified_time
+    public string ArticleSection { get; set; }    // article:section
+    public string ArticleTags { get; set; }       // article:tag (virgülle ayrılmış)
+
+    // Music Spesifik (Müzik için)
+    public string MusicDuration { get; set; }     // music:duration
+    public string MusicAlbum { get; set; }        // music:album
+    public string MusicMusician { get; set; }     // music:musician
+
+    // Navigation Property
+    public Page Page { get; set; }
+}
+
+================================================================================
+                              ENTITY 4: TwitterCard
+================================================================================
+Açıklama: Twitter Card meta bilgilerini tutar
+
+public class TwitterCard
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Foreign Key
+    public int PageId { get; set; }
+
+    // Twitter Card Bilgileri
+    public string CardType { get; set; }          // summary, summary_large_image, player, app
+    public string Site { get; set; }              // @username
+    public string Creator { get; set; }           // @username
+    public string Title { get; set; }             // twitter:title
+    public string Description { get; set; }       // twitter:description
+    public string Image { get; set; }             // twitter:image
+    public string ImageAlt { get; set; }          // twitter:image:alt
+
+    // Player Card Spesifik (Müzik/Video için)
+    public string PlayerUrl { get; set; }         // twitter:player
+    public int? PlayerWidth { get; set; }         // twitter:player:width
+    public int? PlayerHeight { get; set; }        // twitter:player:height
+    public string PlayerStream { get; set; }      // twitter:player:stream
+
+    // Navigation Property
+    public Page Page { get; set; }
+}
+
+================================================================================
+                              ENTITY 5: StructuredData
+================================================================================
+Açıklama: JSON-LD Structured Data (Schema.org) bilgilerini tutar
+
+public class StructuredData
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Foreign Key
+    public int PageId { get; set; }
+
+    // Schema Bilgileri
+    public SchemaType SchemaType { get; set; }    // Schema tipi (enum)
+    public string JsonLdContent { get; set; }     // JSON-LD içeriği (tam JSON)
+    public bool IsActive { get; set; }            // Aktif mi?
+
+    // Zaman Damgaları
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+
+    // Navigation Property
+    public Page Page { get; set; }
+}
+
+// Schema Tipi Enum
+public enum SchemaType
+{
+    Person = 0,              // Kişi
+    Organization = 1,        // Organizasyon
+    WebSite = 2,             // Web Sitesi
+    WebPage = 3,             // Web Sayfası
+    AboutPage = 4,           // Hakkında Sayfası
+    ContactPage = 5,         // İletişim Sayfası
+    Blog = 6,                // Blog
+    BlogPosting = 7,         // Blog Yazısı
+    Article = 8,             // Makale
+    CollectionPage = 9,      // Koleksiyon Sayfası
+    ItemList = 10,           // Liste
+    SoftwareApplication = 11,// Yazılım Uygulaması
+    CreativeWork = 12,       // Yaratıcı Eser
+    MusicRecording = 13,     // Müzik Kaydı
+    MusicAlbum = 14,         // Müzik Albümü
+    BreadcrumbList = 15,     // Breadcrumb
+    FAQPage = 16,            // SSS Sayfası
+    HowTo = 17,              // Nasıl Yapılır
+    Custom = 99              // Özel
+}
+
+================================================================================
+                              ENTITY 6: SitemapEntry
+================================================================================
+Açıklama: Sitemap girişlerini yönetir
+
+public class SitemapEntry
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Foreign Key (nullable - dinamik içerikler için)
+    public int? PageId { get; set; }
+
+    // Sitemap Bilgileri
+    public string Loc { get; set; }               // <loc> URL
+    public DateTime LastMod { get; set; }         // <lastmod>
+    public ChangeFrequency ChangeFreq { get; set; } // <changefreq>
+    public double Priority { get; set; }          // <priority> (0.0 - 1.0)
+    public bool IsActive { get; set; }            // Aktif mi?
+
+    // Dinamik İçerik Referansları
+    public int? BlogId { get; set; }              // Blog yazısı için
+    public int? ProjectId { get; set; }           // Proje için
+    public int? MusicId { get; set; }             // Müzik için
+
+    // Navigation Properties
+    public Page Page { get; set; }
+    public Blog Blog { get; set; }
+    public Project Project { get; set; }
+    public Music Music { get; set; }
+}
+
+// Değişim Sıklığı Enum
+public enum ChangeFrequency
+{
+    Always = 0,
+    Hourly = 1,
+    Daily = 2,
+    Weekly = 3,
+    Monthly = 4,
+    Yearly = 5,
+    Never = 6
+}
+
+================================================================================
+                              ENTITY 7: SocialMedia
+================================================================================
+Açıklama: Sosyal medya hesaplarını yönetir
+
+public class SocialMedia
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Sosyal Medya Bilgileri
+    public SocialPlatform Platform { get; set; }  // Platform tipi (enum)
+    public string Url { get; set; }               // Profil URL'i
+    public string Username { get; set; }          // Kullanıcı adı
+    public string DisplayName { get; set; }       // Görünen ad
+    public int DisplayOrder { get; set; }         // Sıralama
+    public bool IsActive { get; set; }            // Aktif mi?
+    public bool ShowInHeader { get; set; }        // Header'da göster
+    public bool ShowInFooter { get; set; }        // Footer'da göster
+    public bool IncludeInJsonLd { get; set; }     // JSON-LD'de kullan
+
+    // Zaman Damgaları
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+}
+
+// Sosyal Platform Enum
+public enum SocialPlatform
+{
+    Facebook = 0,
+    Twitter = 1,      // X
+    Instagram = 2,
+    LinkedIn = 3,
+    YouTube = 4,
+    GitHub = 5,
+    TikTok = 6,
+    Pinterest = 7,
+    Threads = 8,
+    Medium = 9,
+    Custom = 99
+}
+
+================================================================================
+                              ENTITY 8: SiteSettings
+================================================================================
+Açıklama: Genel site ayarlarını tutar (Singleton)
+
+public class SiteSettings
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Site Temel Bilgileri
+    public string SiteName { get; set; }          // Site adı
+    public string SiteUrl { get; set; }           // Ana URL (https://mehmetasker.com)
+    public string SiteDescription { get; set; }   // Site açıklaması
+    public string DefaultLocale { get; set; }     // Varsayılan dil (tr_TR)
+    public string DefaultLanguage { get; set; }   // HTML lang (tr)
+    public string DefaultAuthor { get; set; }     // Varsayılan yazar
+    public string ThemeColor { get; set; }        // Theme color (#000000)
+
+    // Görsel Ayarları
+    public string FaviconUrl { get; set; }        // favicon.ico
+    public string Logo192Url { get; set; }        // logo192.png
+    public string Logo512Url { get; set; }        // logo512.png
+    public string DefaultOgImage { get; set; }    // Varsayılan OG image
+
+    // SEO Varsayılanları
+    public string DefaultRobots { get; set; }     // Varsayılan robots (index, follow)
+    public string GoogleAnalyticsId { get; set; } // GA tracking ID
+    public string GoogleSearchConsoleId { get; set; } // Search Console doğrulama
+
+    // Zaman Damgaları
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+}
+
+================================================================================
+                              ENTITY 9: Blog
+================================================================================
+Açıklama: Blog yazılarını yönetir (Dinamik içerik)
+
+public class Blog
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Temel Bilgiler
+    public string Title { get; set; }             // Blog başlığı
+    public string Slug { get; set; }              // URL slug
+    public string Summary { get; set; }           // Özet (meta description için)
+    public string Content { get; set; }           // İçerik (HTML/Markdown)
+    public string FeaturedImage { get; set; }     // Öne çıkan görsel
+    public string FeaturedImageAlt { get; set; }  // Görsel alt text
+
+    // Kategorilendirme
+    public string Tags { get; set; }              // Etiketler (virgülle ayrılmış)
+    public string Category { get; set; }          // Kategori
+
+    // Yayın Bilgileri
+    public DateTime PublishedDate { get; set; }   // Yayın tarihi
+    public DateTime? ModifiedDate { get; set; }   // Düzenleme tarihi
+    public BlogStatus Status { get; set; }        // Durum (enum)
+    public bool IsPublished { get; set; }         // Yayında mı?
+    public bool IsFeatured { get; set; }          // Öne çıkan mı?
+
+    // SEO - Özel (Genel ayarları override eder)
+    public string SeoTitle { get; set; }          // Özel SEO başlığı
+    public string SeoDescription { get; set; }    // Özel SEO açıklaması
+    public string SeoKeywords { get; set; }       // Özel SEO keywords
+
+    // İstatistikler
+    public int ViewCount { get; set; }            // Görüntülenme sayısı
+    public int ReadTimeMinutes { get; set; }      // Okuma süresi (dakika)
+
+    // Zaman Damgaları
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+
+    // Navigation Properties
+    public SitemapEntry SitemapEntry { get; set; }
+}
+
+// Blog Durum Enum
+public enum BlogStatus
+{
+    Draft = 0,          // Taslak
+    Published = 1,      // Yayında
+    Scheduled = 2,      // Zamanlanmış
+    Archived = 3        // Arşivlenmiş
+}
+
+================================================================================
+                              ENTITY 10: Project
+================================================================================
+Açıklama: Projeleri yönetir (Dinamik içerik)
+
+public class Project
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Temel Bilgiler
+    public string Name { get; set; }              // Proje adı
+    public string Slug { get; set; }              // URL slug
+    public string ShortDescription { get; set; } // Kısa açıklama
+    public string Description { get; set; }       // Detaylı açıklama
+    public string FeaturedImage { get; set; }     // Öne çıkan görsel
+    public string FeaturedImageAlt { get; set; }  // Görsel alt text
+
+    // Teknoloji & Etiketler
+    public string Tags { get; set; }              // Etiketler (virgülle ayrılmış)
+    public string Technologies { get; set; }      // Kullanılan teknolojiler
+    public string Category { get; set; }          // Kategori (Web, Mobile, vb.)
+
+    // Linkler
+    public string DemoUrl { get; set; }           // Demo linki
+    public string GithubUrl { get; set; }         // GitHub linki
+    public string DocumentationUrl { get; set; }  // Dokümantasyon linki
+
+    // Yayın Bilgileri
+    public DateTime? ProjectDate { get; set; }    // Proje tarihi
+    public ProjectStatus Status { get; set; }     // Durum (enum)
+    public bool IsPublished { get; set; }         // Yayında mı?
+    public bool IsFeatured { get; set; }          // Öne çıkan mı?
+    public int DisplayOrder { get; set; }         // Sıralama
+
+    // SEO - Özel
+    public string SeoTitle { get; set; }
+    public string SeoDescription { get; set; }
+    public string SeoKeywords { get; set; }
+
+    // Zaman Damgaları
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+
+    // Navigation Properties
+    public SitemapEntry SitemapEntry { get; set; }
+}
+
+// Proje Durum Enum
+public enum ProjectStatus
+{
+    InProgress = 0,     // Devam ediyor
+    Completed = 1,      // Tamamlandı
+    OnHold = 2,         // Beklemede
+    Archived = 3        // Arşivlenmiş
+}
+
+================================================================================
+                              ENTITY 11: Music
+================================================================================
+Açıklama: Müzikleri yönetir (Dinamik içerik)
+
+public class Music
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Temel Bilgiler
+    public string Name { get; set; }              // Şarkı adı
+    public string Slug { get; set; }              // URL slug
+    public string Description { get; set; }       // Açıklama
+    public string Artist { get; set; }            // Sanatçı
+    public string Album { get; set; }             // Albüm
+    public string Genre { get; set; }             // Tür
+
+    // Medya
+    public string AudioUrl { get; set; }          // Ses dosyası URL'i
+    public string CoverImage { get; set; }        // Kapak görseli
+    public string CoverImageAlt { get; set; }     // Görsel alt text
+    public int DurationSeconds { get; set; }      // Süre (saniye)
+
+    // Yayın Bilgileri
+    public DateTime? ReleaseDate { get; set; }    // Yayın tarihi
+    public bool IsPublished { get; set; }         // Yayında mı?
+    public bool IsFeatured { get; set; }          // Öne çıkan mı?
+    public int DisplayOrder { get; set; }         // Sıralama
+
+    // SEO - Özel
+    public string SeoTitle { get; set; }
+    public string SeoDescription { get; set; }
+    public string SeoKeywords { get; set; }
+
+    // İstatistikler
+    public int PlayCount { get; set; }            // Dinlenme sayısı
+
+    // Zaman Damgaları
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+
+    // Navigation Properties
+    public SitemapEntry SitemapEntry { get; set; }
+}
+
+================================================================================
+                              ENTITY 12: AuditLog
+================================================================================
+Açıklama: Değişiklik kayıtlarını tutar
+
+public class AuditLog
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Log Bilgileri
+    public string EntityName { get; set; }        // Entity adı (Page, Blog, vb.)
+    public int EntityId { get; set; }             // Entity ID
+    public string Action { get; set; }            // Eylem (Create, Update, Delete)
+    public string OldValues { get; set; }         // Eski değerler (JSON)
+    public string NewValues { get; set; }         // Yeni değerler (JSON)
+    public string UserId { get; set; }            // Kullanıcı ID
+    public string UserName { get; set; }          // Kullanıcı adı
+    public string IpAddress { get; set; }         // IP adresi
+
+    // Zaman Damgası
+    public DateTime CreatedAt { get; set; }
+}
+
+================================================================================
+                              DATABASE İLİŞKİLERİ
+================================================================================
+
+[İLİŞKİ DİYAGRAMI]
+
+Page (1) -------- (1) MetaTag
+Page (1) -------- (1) OpenGraph
+Page (1) -------- (1) TwitterCard
+Page (1) -------- (1) StructuredData
+Page (1) -------- (0..1) SitemapEntry
+
+Blog (1) -------- (0..1) SitemapEntry
+Project (1) ----- (0..1) SitemapEntry
+Music (1) ------- (0..1) SitemapEntry
+
+SiteSettings (Singleton - tek kayıt)
+SocialMedia (Bağımsız - liste)
+AuditLog (Bağımsız - log)
+
+================================================================================
+                              API ENDPOINTS
+================================================================================
+
+[PAGES]
+GET     /api/pages                  - Tüm sayfaları listele
+GET     /api/pages/{id}             - Sayfa detayı
+POST    /api/pages                  - Yeni sayfa oluştur
+PUT     /api/pages/{id}             - Sayfa güncelle
+DELETE  /api/pages/{id}             - Sayfa sil
+
+[META TAGS]
+GET     /api/pages/{pageId}/meta    - Meta tag bilgisi
+PUT     /api/pages/{pageId}/meta    - Meta tag güncelle
+
+[OPEN GRAPH]
+GET     /api/pages/{pageId}/og      - Open Graph bilgisi
+PUT     /api/pages/{pageId}/og      - Open Graph güncelle
+
+[TWITTER CARD]
+GET     /api/pages/{pageId}/twitter - Twitter Card bilgisi
+PUT     /api/pages/{pageId}/twitter - Twitter Card güncelle
+
+[STRUCTURED DATA]
+GET     /api/pages/{pageId}/schema  - Structured Data bilgisi
+PUT     /api/pages/{pageId}/schema  - Structured Data güncelle
+
+[BLOGS]
+GET     /api/blogs                  - Tüm blogları listele
+GET     /api/blogs/{id}             - Blog detayı
+POST    /api/blogs                  - Yeni blog oluştur
+PUT     /api/blogs/{id}             - Blog güncelle
+DELETE  /api/blogs/{id}             - Blog sil
+
+[PROJECTS]
+GET     /api/projects               - Tüm projeleri listele
+GET     /api/projects/{id}          - Proje detayı
+POST    /api/projects               - Yeni proje oluştur
+PUT     /api/projects/{id}          - Proje güncelle
+DELETE  /api/projects/{id}          - Proje sil
+
+[MUSIC]
+GET     /api/music                  - Tüm müzikleri listele
+GET     /api/music/{id}             - Müzik detayı
+POST    /api/music                  - Yeni müzik oluştur
+PUT     /api/music/{id}             - Müzik güncelle
+DELETE  /api/music/{id}             - Müzik sil
+
+[SITEMAP]
+GET     /api/sitemap                - Sitemap oluştur (XML)
+GET     /api/sitemap/entries        - Sitemap girişlerini listele
+POST    /api/sitemap/generate       - Sitemap yeniden oluştur
+
+[SETTINGS]
+GET     /api/settings               - Site ayarları
+PUT     /api/settings               - Site ayarları güncelle
+
+[SOCIAL MEDIA]
+GET     /api/social                 - Sosyal medya listesi
+POST    /api/social                 - Yeni sosyal medya ekle
+PUT     /api/social/{id}            - Sosyal medya güncelle
+DELETE  /api/social/{id}            - Sosyal medya sil
+
+################################################################################
+#                                                                              #
+#              BAŞ MÜHENDİS - PROJE GELİŞTİRME ADIMLARI                       #
+#                       (AŞAĞIDAN YUKARIYA - BOTTOM-UP)                        #
+#                                                                              #
+################################################################################
+
+================================================================================
+                    AŞAMA 0: PROJE ALTYAPI HAZIRLIĞI
+================================================================================
+Öncelik: KRİTİK
+Tahmini Süre: 1 gün
+
+[0.1] GELİŞTİRME ORTAMI KURULUMU
+--------------------------------
+[ ] Visual Studio 2022 / VS Code + C# Extension
+[ ] .NET 8 SDK kurulumu
+[ ] SQL Server / PostgreSQL kurulumu
+[ ] Git repository oluşturma
+[ ] Azure DevOps / GitHub Actions pipeline hazırlığı
+
+[0.2] SOLUTION YAPISI OLUŞTURMA
+-------------------------------
+Komut:
+  dotnet new sln -n MehmetAsker.SeoPanel
+
+Proje Yapısı:
+  MehmetAsker.SeoPanel/
+  ├── src/
+  │   ├── MehmetAsker.Domain/           # Entity'ler, Enum'lar
+  │   ├── MehmetAsker.Application/      # Interface'ler, DTO'lar, Servisler
+  │   ├── MehmetAsker.Infrastructure/   # DbContext, Repository'ler
+  │   └── MehmetAsker.Api/              # Web API, Controller'lar
+  ├── tests/
+  │   ├── MehmetAsker.Domain.Tests/
+  │   ├── MehmetAsker.Application.Tests/
+  │   └── MehmetAsker.Api.Tests/
+  ├── docs/
+  │   └── api-documentation.md
+  ├── scripts/
+  │   └── database-seed.sql
+  ├── .gitignore
+  ├── README.md
+  └── MehmetAsker.SeoPanel.sln
+
+[0.3] PROJE OLUŞTURMA KOMUTLARI
+-------------------------------
+# Domain Layer
+dotnet new classlib -n MehmetAsker.Domain -o src/MehmetAsker.Domain
+
+# Application Layer
+dotnet new classlib -n MehmetAsker.Application -o src/MehmetAsker.Application
+
+# Infrastructure Layer
+dotnet new classlib -n MehmetAsker.Infrastructure -o src/MehmetAsker.Infrastructure
+
+# API Layer
+dotnet new webapi -n MehmetAsker.Api -o src/MehmetAsker.Api
+
+# Test Projeleri
+dotnet new xunit -n MehmetAsker.Domain.Tests -o tests/MehmetAsker.Domain.Tests
+dotnet new xunit -n MehmetAsker.Application.Tests -o tests/MehmetAsker.Application.Tests
+dotnet new xunit -n MehmetAsker.Api.Tests -o tests/MehmetAsker.Api.Tests
+
+# Solution'a ekleme
+dotnet sln add src/MehmetAsker.Domain/MehmetAsker.Domain.csproj
+dotnet sln add src/MehmetAsker.Application/MehmetAsker.Application.csproj
+dotnet sln add src/MehmetAsker.Infrastructure/MehmetAsker.Infrastructure.csproj
+dotnet sln add src/MehmetAsker.Api/MehmetAsker.Api.csproj
+
+[0.4] REFERANS BAĞLANTILARI
+---------------------------
+# Application -> Domain
+cd src/MehmetAsker.Application
+dotnet add reference ../MehmetAsker.Domain/MehmetAsker.Domain.csproj
+
+# Infrastructure -> Application, Domain
+cd src/MehmetAsker.Infrastructure
+dotnet add reference ../MehmetAsker.Domain/MehmetAsker.Domain.csproj
+dotnet add reference ../MehmetAsker.Application/MehmetAsker.Application.csproj
+
+# Api -> Application, Infrastructure
+cd src/MehmetAsker.Api
+dotnet add reference ../MehmetAsker.Application/MehmetAsker.Application.csproj
+dotnet add reference ../MehmetAsker.Infrastructure/MehmetAsker.Infrastructure.csproj
+
+Bağımlılık Diyagramı:
+  Api → Application → Domain
+   ↓         ↑
+  Infrastructure ─┘
+
+
+================================================================================
+                    AŞAMA 1: DOMAIN LAYER (EN ALT KATMAN)
+================================================================================
+Öncelik: KRİTİK
+Tahmini Süre: 2 gün
+Bağımlılık: Aşama 0 tamamlanmalı
+
+[1.1] KLASÖR YAPISI
+-------------------
+MehmetAsker.Domain/
+├── Entities/
+│   ├── Page.cs
+│   ├── MetaTag.cs
+│   ├── OpenGraph.cs
+│   ├── TwitterCard.cs
+│   ├── StructuredData.cs
+│   ├── SitemapEntry.cs
+│   ├── SocialMedia.cs
+│   ├── SiteSettings.cs
+│   ├── Blog.cs
+│   ├── Project.cs
+│   ├── Music.cs
+│   └── AuditLog.cs
+├── Enums/
+│   ├── PageType.cs
+│   ├── SchemaType.cs
+│   ├── ChangeFrequency.cs
+│   ├── SocialPlatform.cs
+│   ├── BlogStatus.cs
+│   └── ProjectStatus.cs
+├── Common/
+│   ├── BaseEntity.cs
+│   ├── IAuditableEntity.cs
+│   └── ISoftDelete.cs
+├── Exceptions/
+│   ├── DomainException.cs
+│   ├── NotFoundException.cs
+│   └── ValidationException.cs
+└── Events/
+    ├── IDomainEvent.cs
+    ├── PageCreatedEvent.cs
+    └── BlogPublishedEvent.cs
+
+[1.2] BASE ENTITY OLUŞTURMA
+---------------------------
+Dosya: Common/BaseEntity.cs
+
+public abstract class BaseEntity
+{
+    public int Id { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+}
+
+public interface IAuditableEntity
+{
+    string CreatedBy { get; set; }
+    string UpdatedBy { get; set; }
+}
+
+public interface ISoftDelete
+{
+    bool IsDeleted { get; set; }
+    DateTime? DeletedAt { get; set; }
+}
+
+[1.3] ENTITY OLUŞTURMA SIRASI
+-----------------------------
+Sıra  Entity            Bağımlılık       Durum
+------------------------------------------------------
+1     Enums             -                [ ] Yapılacak
+2     BaseEntity        -                [ ] Yapılacak
+3     SiteSettings      BaseEntity       [ ] Yapılacak
+4     SocialMedia       BaseEntity       [ ] Yapılacak
+5     Page              BaseEntity       [ ] Yapılacak
+6     MetaTag           Page             [ ] Yapılacak
+7     OpenGraph         Page             [ ] Yapılacak
+8     TwitterCard       Page             [ ] Yapılacak
+9     StructuredData    Page             [ ] Yapılacak
+10    Blog              BaseEntity       [ ] Yapılacak
+11    Project           BaseEntity       [ ] Yapılacak
+12    Music             BaseEntity       [ ] Yapılacak
+13    SitemapEntry      Page,Blog,etc    [ ] Yapılacak
+14    AuditLog          -                [ ] Yapılacak
+
+[1.4] DOMAIN VALIDASYONLARI
+---------------------------
+Her entity için iş kuralları:
+
+Page:
+  - Slug benzersiz olmalı
+  - Priority 0.0-1.0 arasında olmalı
+  - URL formatı geçerli olmalı
+
+MetaTag:
+  - Description max 160 karakter
+  - Title max 70 karakter
+  - Keywords virgülle ayrılmış olmalı
+
+Blog:
+  - Slug benzersiz olmalı
+  - PublishedDate geçmiş tarih olamaz (zamanlanmış hariç)
+  - Content boş olamaz
+
+
+================================================================================
+                    AŞAMA 2: APPLICATION LAYER
+================================================================================
+Öncelik: YÜKSEK
+Tahmini Süre: 3 gün
+Bağımlılık: Aşama 1 tamamlanmalı
+
+[2.1] NUGET PAKETLERİ
+---------------------
+dotnet add package AutoMapper
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
+dotnet add package FluentValidation
+dotnet add package FluentValidation.DependencyInjectionExtensions
+dotnet add package MediatR
+dotnet add package MediatR.Extensions.Microsoft.DependencyInjection
+
+[2.2] KLASÖR YAPISI
+-------------------
+MehmetAsker.Application/
+├── Common/
+│   ├── Interfaces/
+│   │   ├── IApplicationDbContext.cs
+│   │   ├── IRepository.cs
+│   │   ├── IUnitOfWork.cs
+│   │   ├── ICacheService.cs
+│   │   └── ICurrentUserService.cs
+│   ├── Mappings/
+│   │   └── MappingProfile.cs
+│   ├── Behaviours/
+│   │   ├── ValidationBehaviour.cs
+│   │   ├── LoggingBehaviour.cs
+│   │   └── PerformanceBehaviour.cs
+│   └── Models/
+│       ├── Result.cs
+│       └── PaginatedList.cs
+├── DTOs/
+│   ├── Pages/
+│   │   ├── PageDto.cs
+│   │   ├── CreatePageDto.cs
+│   │   └── UpdatePageDto.cs
+│   ├── MetaTags/
+│   │   ├── MetaTagDto.cs
+│   │   └── UpdateMetaTagDto.cs
+│   ├── OpenGraph/
+│   │   ├── OpenGraphDto.cs
+│   │   └── UpdateOpenGraphDto.cs
+│   ├── TwitterCards/
+│   │   ├── TwitterCardDto.cs
+│   │   └── UpdateTwitterCardDto.cs
+│   ├── Blogs/
+│   │   ├── BlogDto.cs
+│   │   ├── BlogListDto.cs
+│   │   ├── CreateBlogDto.cs
+│   │   └── UpdateBlogDto.cs
+│   ├── Projects/
+│   │   ├── ProjectDto.cs
+│   │   ├── CreateProjectDto.cs
+│   │   └── UpdateProjectDto.cs
+│   └── Music/
+│       ├── MusicDto.cs
+│       ├── CreateMusicDto.cs
+│       └── UpdateMusicDto.cs
+├── Features/
+│   ├── Pages/
+│   │   ├── Commands/
+│   │   │   ├── CreatePage/
+│   │   │   │   ├── CreatePageCommand.cs
+│   │   │   │   ├── CreatePageCommandHandler.cs
+│   │   │   │   └── CreatePageCommandValidator.cs
+│   │   │   ├── UpdatePage/
+│   │   │   └── DeletePage/
+│   │   └── Queries/
+│   │       ├── GetPageById/
+│   │       ├── GetAllPages/
+│   │       └── GetPageBySlug/
+│   ├── MetaTags/
+│   ├── Blogs/
+│   ├── Projects/
+│   ├── Music/
+│   ├── Sitemap/
+│   │   └── Queries/
+│   │       └── GenerateSitemap/
+│   └── Settings/
+└── Services/
+    ├── ISeoService.cs
+    ├── ISitemapService.cs
+    └── IJsonLdService.cs
+
+[2.3] INTERFACE TANIMLARI
+-------------------------
+Dosya: Common/Interfaces/IRepository.cs
+
+public interface IRepository<T> where T : BaseEntity
+{
+    Task<T> GetByIdAsync(int id, CancellationToken cancellationToken = default);
+    Task<IReadOnlyList<T>> GetAllAsync(CancellationToken cancellationToken = default);
+    Task<T> AddAsync(T entity, CancellationToken cancellationToken = default);
+    Task UpdateAsync(T entity, CancellationToken cancellationToken = default);
+    Task DeleteAsync(T entity, CancellationToken cancellationToken = default);
+    IQueryable<T> Query();
+}
+
+public interface IPageRepository : IRepository<Page>
+{
+    Task<Page> GetBySlugAsync(string slug, CancellationToken cancellationToken = default);
+    Task<Page> GetWithAllSeoDataAsync(int id, CancellationToken cancellationToken = default);
+    Task<bool> SlugExistsAsync(string slug, CancellationToken cancellationToken = default);
+}
+
+[2.4] DTO OLUŞTURMA SIRASI
+--------------------------
+Sıra  DTO Grubu         Durum
+--------------------------------------
+1     PageDto           [ ] Yapılacak
+2     MetaTagDto        [ ] Yapılacak
+3     OpenGraphDto      [ ] Yapılacak
+4     TwitterCardDto    [ ] Yapılacak
+5     StructuredDataDto [ ] Yapılacak
+6     BlogDto           [ ] Yapılacak
+7     ProjectDto        [ ] Yapılacak
+8     MusicDto          [ ] Yapılacak
+9     SitemapDto        [ ] Yapılacak
+10    SettingsDto       [ ] Yapılacak
+
+[2.5] CQRS PATTERN - COMMAND/QUERY OLUŞTURMA
+--------------------------------------------
+Her entity için:
+  - Create Command + Handler + Validator
+  - Update Command + Handler + Validator
+  - Delete Command + Handler
+  - GetById Query + Handler
+  - GetAll Query + Handler
+  - GetPaginated Query + Handler
+
+
+================================================================================
+                    AŞAMA 3: INFRASTRUCTURE LAYER
+================================================================================
+Öncelik: YÜKSEK
+Tahmini Süre: 3 gün
+Bağımlılık: Aşama 2 tamamlanmalı
+
+[3.1] NUGET PAKETLERİ
+---------------------
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+# Alternatif: PostgreSQL için
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+
+[3.2] KLASÖR YAPISI
+-------------------
+MehmetAsker.Infrastructure/
+├── Data/
+│   ├── ApplicationDbContext.cs
+│   ├── Configurations/
+│   │   ├── PageConfiguration.cs
+│   │   ├── MetaTagConfiguration.cs
+│   │   ├── OpenGraphConfiguration.cs
+│   │   ├── TwitterCardConfiguration.cs
+│   │   ├── StructuredDataConfiguration.cs
+│   │   ├── BlogConfiguration.cs
+│   │   ├── ProjectConfiguration.cs
+│   │   ├── MusicConfiguration.cs
+│   │   ├── SitemapEntryConfiguration.cs
+│   │   ├── SocialMediaConfiguration.cs
+│   │   ├── SiteSettingsConfiguration.cs
+│   │   └── AuditLogConfiguration.cs
+│   ├── Migrations/
+│   └── Seeds/
+│       └── DataSeeder.cs
+├── Repositories/
+│   ├── BaseRepository.cs
+│   ├── PageRepository.cs
+│   ├── BlogRepository.cs
+│   ├── ProjectRepository.cs
+│   ├── MusicRepository.cs
+│   └── UnitOfWork.cs
+├── Services/
+│   ├── SeoService.cs
+│   ├── SitemapService.cs
+│   ├── JsonLdService.cs
+│   └── CacheService.cs
+└── DependencyInjection.cs
+
+[3.3] DBCONTEXT OLUŞTURMA
+-------------------------
+Dosya: Data/ApplicationDbContext.cs
+
+public class ApplicationDbContext : DbContext, IApplicationDbContext
+{
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options) { }
+
+    // DbSet'ler
+    public DbSet<Page> Pages { get; set; }
+    public DbSet<MetaTag> MetaTags { get; set; }
+    public DbSet<OpenGraph> OpenGraphs { get; set; }
+    public DbSet<TwitterCard> TwitterCards { get; set; }
+    public DbSet<StructuredData> StructuredDatas { get; set; }
+    public DbSet<SitemapEntry> SitemapEntries { get; set; }
+    public DbSet<SocialMedia> SocialMedias { get; set; }
+    public DbSet<SiteSettings> SiteSettings { get; set; }
+    public DbSet<Blog> Blogs { get; set; }
+    public DbSet<Project> Projects { get; set; }
+    public DbSet<Music> Musics { get; set; }
+    public DbSet<AuditLog> AuditLogs { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        base.OnModelCreating(modelBuilder);
+    }
+
+    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        // Audit logging
+        foreach (var entry in ChangeTracker.Entries<BaseEntity>())
+        {
+            switch (entry.State)
+            {
+                case EntityState.Added:
+                    entry.Entity.CreatedAt = DateTime.UtcNow;
+                    entry.Entity.UpdatedAt = DateTime.UtcNow;
+                    break;
+                case EntityState.Modified:
+                    entry.Entity.UpdatedAt = DateTime.UtcNow;
+                    break;
+            }
+        }
+        return base.SaveChangesAsync(cancellationToken);
+    }
+}
+
+[3.4] ENTITY CONFIGURATION SIRASI
+---------------------------------
+Sıra  Configuration           Durum
+-----------------------------------------
+1     PageConfiguration       [ ] Yapılacak
+2     MetaTagConfiguration    [ ] Yapılacak
+3     OpenGraphConfiguration  [ ] Yapılacak
+4     TwitterCardConfiguration[ ] Yapılacak
+5     StructuredDataConfig    [ ] Yapılacak
+6     BlogConfiguration       [ ] Yapılacak
+7     ProjectConfiguration    [ ] Yapılacak
+8     MusicConfiguration      [ ] Yapılacak
+9     SitemapConfiguration    [ ] Yapılacak
+10    SocialMediaConfig       [ ] Yapılacak
+11    SiteSettingsConfig      [ ] Yapılacak
+12    AuditLogConfiguration   [ ] Yapılacak
+
+[3.5] MIGRATION OLUŞTURMA
+-------------------------
+# İlk migration
+dotnet ef migrations add InitialCreate -p src/MehmetAsker.Infrastructure -s src/MehmetAsker.Api
+
+# Veritabanı güncelleme
+dotnet ef database update -p src/MehmetAsker.Infrastructure -s src/MehmetAsker.Api
+
+[3.6] SEED DATA
+---------------
+Dosya: Data/Seeds/DataSeeder.cs
+
+public static class DataSeeder
+{
+    public static async Task SeedAsync(ApplicationDbContext context)
+    {
+        // SiteSettings (Singleton)
+        if (!await context.SiteSettings.AnyAsync())
+        {
+            context.SiteSettings.Add(new SiteSettings
+            {
+                SiteName = "Mehmet Asker",
+                SiteUrl = "https://mehmetasker.com",
+                DefaultLocale = "tr_TR",
+                DefaultLanguage = "tr",
+                DefaultAuthor = "Mehmet Asker",
+                ThemeColor = "#000000"
+            });
+        }
+
+        // Statik Sayfalar
+        if (!await context.Pages.AnyAsync())
+        {
+            var pages = new List<Page>
+            {
+                new Page { Name = "Ana Sayfa", Slug = "", Url = "/", PageType = PageType.Home, Priority = 1.0 },
+                new Page { Name = "Hakkımda", Slug = "about", Url = "/about", PageType = PageType.About, Priority = 0.9 },
+                new Page { Name = "Blog", Slug = "blog", Url = "/blog", PageType = PageType.Blog, Priority = 0.8 },
+                new Page { Name = "Projeler", Slug = "work", Url = "/work", PageType = PageType.Work, Priority = 0.8 },
+                new Page { Name = "Yetenekler", Slug = "skills", Url = "/skills", PageType = PageType.Skills, Priority = 0.7 }
+            };
+            context.Pages.AddRange(pages);
+        }
+
+        // Sosyal Medya
+        if (!await context.SocialMedias.AnyAsync())
+        {
+            var socials = new List<SocialMedia>
+            {
+                new SocialMedia { Platform = SocialPlatform.Facebook, Url = "https://www.facebook.com/profile.php?id=717434260", DisplayOrder = 1 },
+                new SocialMedia { Platform = SocialPlatform.Twitter, Url = "https://twitter.com/MehmetAsker10", DisplayOrder = 2 },
+                new SocialMedia { Platform = SocialPlatform.Instagram, Url = "https://www.instagram.com/m3hm3t_ask3r/", DisplayOrder = 3 }
+            };
+            context.SocialMedias.AddRange(socials);
+        }
+
+        await context.SaveChangesAsync();
+    }
+}
+
+
+================================================================================
+                    AŞAMA 4: API LAYER (EN ÜST KATMAN)
+================================================================================
+Öncelik: YÜKSEK
+Tahmini Süre: 3 gün
+Bağımlılık: Aşama 3 tamamlanmalı
+
+[4.1] NUGET PAKETLERİ
+---------------------
+dotnet add package Swashbuckle.AspNetCore
+dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
+dotnet add package Serilog.AspNetCore
+dotnet add package Serilog.Sinks.Console
+dotnet add package Serilog.Sinks.File
+
+[4.2] KLASÖR YAPISI
+-------------------
+MehmetAsker.Api/
+├── Controllers/
+│   ├── PagesController.cs
+│   ├── MetaTagsController.cs
+│   ├── OpenGraphController.cs
+│   ├── TwitterCardsController.cs
+│   ├── StructuredDataController.cs
+│   ├── BlogsController.cs
+│   ├── ProjectsController.cs
+│   ├── MusicController.cs
+│   ├── SitemapController.cs
+│   ├── SocialMediaController.cs
+│   └── SettingsController.cs
+├── Filters/
+│   ├── ApiExceptionFilterAttribute.cs
+│   └── ValidationFilterAttribute.cs
+├── Middleware/
+│   ├── ExceptionHandlingMiddleware.cs
+│   └── RequestLoggingMiddleware.cs
+├── Extensions/
+│   └── ServiceCollectionExtensions.cs
+├── appsettings.json
+├── appsettings.Development.json
+└── Program.cs
+
+[4.3] PROGRAM.CS YAPILANDIRMASI
+-------------------------------
+Dosya: Program.cs
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Serilog
+builder.Host.UseSerilog((context, configuration) =>
+    configuration.ReadFrom.Configuration(context.Configuration));
+
+// Services
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Mehmet Asker SEO Panel API",
+        Version = "v1"
+    });
+});
+
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+    {
+        policy.WithOrigins("http://localhost:3000", "https://mehmetasker.com")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+// Application Services
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
+
+// DbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+var app = builder.Build();
+
+// Middleware Pipeline
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
+app.UseCors("AllowReactApp");
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllers();
+
+// Seed Data
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    await context.Database.MigrateAsync();
+    await DataSeeder.SeedAsync(context);
+}
+
+app.Run();
+
+[4.4] CONTROLLER OLUŞTURMA SIRASI
+---------------------------------
+Sıra  Controller              Endpoint Sayısı    Durum
+--------------------------------------------------------
+1     PagesController         6                  [ ] Yapılacak
+2     MetaTagsController      2                  [ ] Yapılacak
+3     OpenGraphController     2                  [ ] Yapılacak
+4     TwitterCardsController  2                  [ ] Yapılacak
+5     StructuredDataController 2                 [ ] Yapılacak
+6     BlogsController         5                  [ ] Yapılacak
+7     ProjectsController      5                  [ ] Yapılacak
+8     MusicController         5                  [ ] Yapılacak
+9     SitemapController       3                  [ ] Yapılacak
+10    SocialMediaController   4                  [ ] Yapılacak
+11    SettingsController      2                  [ ] Yapılacak
+
+[4.5] ÖRNEK CONTROLLER
+----------------------
+Dosya: Controllers/PagesController.cs
+
+[ApiController]
+[Route("api/[controller]")]
+public class PagesController : ControllerBase
+{
+    private readonly IMediator _mediator;
+
+    public PagesController(IMediator mediator)
+    {
+        _mediator = mediator;
+    }
+
+    [HttpGet]
+    public async Task<ActionResult<List<PageDto>>> GetAll()
+    {
+        var result = await _mediator.Send(new GetAllPagesQuery());
+        return Ok(result);
+    }
+
+    [HttpGet("{id}")]
+    public async Task<ActionResult<PageDto>> GetById(int id)
+    {
+        var result = await _mediator.Send(new GetPageByIdQuery(id));
+        return result != null ? Ok(result) : NotFound();
+    }
+
+    [HttpGet("slug/{slug}")]
+    public async Task<ActionResult<PageDto>> GetBySlug(string slug)
+    {
+        var result = await _mediator.Send(new GetPageBySlugQuery(slug));
+        return result != null ? Ok(result) : NotFound();
+    }
+
+    [HttpPost]
+    public async Task<ActionResult<int>> Create(CreatePageCommand command)
+    {
+        var result = await _mediator.Send(command);
+        return CreatedAtAction(nameof(GetById), new { id = result }, result);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(int id, UpdatePageCommand command)
+    {
+        if (id != command.Id) return BadRequest();
+        await _mediator.Send(command);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(int id)
+    {
+        await _mediator.Send(new DeletePageCommand(id));
+        return NoContent();
+    }
+}
+
+
+================================================================================
+                    AŞAMA 5: FRONTEND ENTEGRASYONU
+================================================================================
+Öncelik: ORTA
+Tahmini Süre: 2 gün
+Bağımlılık: Aşama 4 tamamlanmalı
+
+[5.1] REACT TARAFINDA YAPILACAKLAR
+----------------------------------
+[ ] API service oluştur (axios/fetch)
+[ ] Environment değişkenlerini ayarla
+[ ] react-helmet kurulumu
+[ ] Her sayfa için SEO component oluştur
+[ ] API'den meta bilgilerini çek
+[ ] Dinamik sayfalar için SEO bilgisi yükle
+
+[5.2] API SERVICE ÖRNEK
+-----------------------
+Dosya: src/services/seoApi.js
+
+const API_URL = process.env.REACT_APP_API_URL || 'https://api.mehmetasker.com';
+
+export const seoApi = {
+    // Pages
+    getPageBySlug: (slug) => fetch(`${API_URL}/api/pages/slug/${slug}`).then(r => r.json()),
+
+    // Blogs
+    getBlogById: (id) => fetch(`${API_URL}/api/blogs/${id}`).then(r => r.json()),
+
+    // Projects
+    getProjectById: (id) => fetch(`${API_URL}/api/projects/${id}`).then(r => r.json()),
+
+    // Sitemap
+    getSitemap: () => fetch(`${API_URL}/api/sitemap`).then(r => r.text()),
+};
+
+[5.3] SEO COMPONENT ÖRNEK
+-------------------------
+Dosya: src/components/SEO.js
+
+import { Helmet } from 'react-helmet';
+
+const SEO = ({ meta, og, twitter }) => (
+    <Helmet>
+        <title>{meta?.title}</title>
+        <meta name="description" content={meta?.description} />
+        <meta name="keywords" content={meta?.keywords} />
+        <meta name="author" content={meta?.author} />
+        <meta name="robots" content={meta?.robots} />
+        <link rel="canonical" href={meta?.canonicalUrl} />
+
+        {/* Open Graph */}
+        <meta property="og:type" content={og?.ogType} />
+        <meta property="og:url" content={og?.ogUrl} />
+        <meta property="og:title" content={og?.ogTitle} />
+        <meta property="og:description" content={og?.ogDescription} />
+        <meta property="og:image" content={og?.ogImage} />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content={twitter?.cardType} />
+        <meta name="twitter:title" content={twitter?.title} />
+        <meta name="twitter:description" content={twitter?.description} />
+        <meta name="twitter:image" content={twitter?.image} />
+    </Helmet>
+);
+
+
+================================================================================
+                    AŞAMA 6: TEST KATMANI
+================================================================================
+Öncelik: ORTA
+Tahmini Süre: 2 gün
+Bağımlılık: Aşama 4 tamamlanmalı
+
+[6.1] TEST TİPLERİ
+------------------
+1. Unit Tests (Domain & Application)
+2. Integration Tests (Infrastructure & API)
+3. End-to-End Tests (tam akış)
+
+[6.2] UNIT TEST ÖRNEĞİ
+----------------------
+Dosya: tests/MehmetAsker.Domain.Tests/Entities/PageTests.cs
+
+public class PageTests
+{
+    [Fact]
+    public void Page_ShouldHaveValidPriority()
+    {
+        // Arrange
+        var page = new Page { Priority = 1.5 };
+
+        // Act & Assert
+        Assert.True(page.Priority >= 0.0 && page.Priority <= 1.0,
+            "Priority must be between 0.0 and 1.0");
+    }
+
+    [Fact]
+    public void Page_SlugShouldNotContainSpaces()
+    {
+        // Arrange
+        var page = new Page { Slug = "my page" };
+
+        // Act & Assert
+        Assert.DoesNotContain(" ", page.Slug);
+    }
+}
+
+[6.3] INTEGRATION TEST ÖRNEĞİ
+-----------------------------
+Dosya: tests/MehmetAsker.Api.Tests/Controllers/PagesControllerTests.cs
+
+public class PagesControllerTests : IClassFixture<WebApplicationFactory<Program>>
+{
+    private readonly HttpClient _client;
+
+    public PagesControllerTests(WebApplicationFactory<Program> factory)
+    {
+        _client = factory.CreateClient();
+    }
+
+    [Fact]
+    public async Task GetAll_ReturnsSuccessStatusCode()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/pages");
+
+        // Assert
+        response.EnsureSuccessStatusCode();
+    }
+}
+
+
+================================================================================
+                    AŞAMA 7: DEPLOYMENT
+================================================================================
+Öncelik: DÜŞÜK
+Tahmini Süre: 1 gün
+Bağımlılık: Aşama 6 tamamlanmalı
+
+[7.1] DEPLOYMENT SEÇENEKLERİ
+----------------------------
+1. Azure App Service
+2. AWS Elastic Beanstalk
+3. Docker + Kubernetes
+4. VPS (DigitalOcean, Hetzner)
+
+[7.2] DOCKER YAPILANDIRMASI
+---------------------------
+Dosya: Dockerfile
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
+EXPOSE 80
+EXPOSE 443
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY ["src/MehmetAsker.Api/MehmetAsker.Api.csproj", "MehmetAsker.Api/"]
+COPY ["src/MehmetAsker.Application/MehmetAsker.Application.csproj", "MehmetAsker.Application/"]
+COPY ["src/MehmetAsker.Domain/MehmetAsker.Domain.csproj", "MehmetAsker.Domain/"]
+COPY ["src/MehmetAsker.Infrastructure/MehmetAsker.Infrastructure.csproj", "MehmetAsker.Infrastructure/"]
+RUN dotnet restore "MehmetAsker.Api/MehmetAsker.Api.csproj"
+COPY . .
+WORKDIR "/src/MehmetAsker.Api"
+RUN dotnet build -c Release -o /app/build
+
+FROM build AS publish
+RUN dotnet publish -c Release -o /app/publish
+
+FROM base AS final
+WORKDIR /app
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "MehmetAsker.Api.dll"]
+
+[7.3] DOCKER COMPOSE
+--------------------
+Dosya: docker-compose.yml
+
+version: '3.8'
+services:
+  api:
+    build: .
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Server=db;Database=SeoPanelDb;User=sa;Password=YourPassword123!
+    depends_on:
+      - db
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=YourPassword123!
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+
+volumes:
+  sqldata:
+
+[7.4] CI/CD PIPELINE (GitHub Actions)
+-------------------------------------
+Dosya: .github/workflows/deploy.yml
+
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --no-restore -c Release
+
+    - name: Test
+      run: dotnet test --no-build -c Release
+
+    - name: Publish
+      run: dotnet publish src/MehmetAsker.Api -c Release -o publish
+
+    - name: Deploy to Azure
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'mehmetasker-seo-api'
+        publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+        package: publish
+
+
+================================================================================
+                    ÖZET: GELİŞTİRME TAKVİMİ
+================================================================================
+
+Aşama   Açıklama                        Süre      Bağımlılık    Durum
+--------------------------------------------------------------------------------
+0       Altyapı Hazırlığı               1 gün     -             [ ] Bekliyor
+1       Domain Layer                    2 gün     Aşama 0       [ ] Bekliyor
+2       Application Layer               3 gün     Aşama 1       [ ] Bekliyor
+3       Infrastructure Layer            3 gün     Aşama 2       [ ] Bekliyor
+4       API Layer                       3 gün     Aşama 3       [ ] Bekliyor
+5       Frontend Entegrasyonu           2 gün     Aşama 4       [ ] Bekliyor
+6       Test                            2 gün     Aşama 4       [ ] Bekliyor
+7       Deployment                      1 gün     Aşama 6       [ ] Bekliyor
+--------------------------------------------------------------------------------
+TOPLAM                                  17 gün
+
+Kritik Yol: 0 → 1 → 2 → 3 → 4 → 6 → 7 (15 gün)
+Paralel İş: Aşama 5 ve Aşama 6 paralel yapılabilir
+
+
+================================================================================
+                    GELİŞTİRME BAŞLANGIÇ KONTROL LİSTESİ
+================================================================================
+
+Başlamadan Önce:
+[ ] Tüm araçlar kuruldu
+[ ] Git repository hazır
+[ ] Veritabanı sunucusu çalışıyor
+[ ] Development ortamı ayarlandı
+
+İlk Sprint (Aşama 0-1):
+[ ] Solution oluşturuldu
+[ ] Proje referansları bağlandı
+[ ] Tüm Entity'ler oluşturuldu
+[ ] Enum'lar tanımlandı
+[ ] Domain validasyonları eklendi
+
+İkinci Sprint (Aşama 2-3):
+[ ] Application layer tamamlandı
+[ ] DbContext oluşturuldu
+[ ] Migration'lar çalıştırıldı
+[ ] Seed data eklendi
+[ ] Repository'ler hazır
+
+Üçüncü Sprint (Aşama 4-5):
+[ ] API endpoint'leri çalışıyor
+[ ] Swagger dokümantasyonu hazır
+[ ] CORS ayarları yapıldı
+[ ] Frontend entegrasyonu tamamlandı
+
+Final Sprint (Aşama 6-7):
+[ ] Testler yazıldı ve geçti
+[ ] Docker image oluşturuldu
+[ ] CI/CD pipeline çalışıyor
+[ ] Production'a deploy edildi
+
+
+################################################################################
+#                                                                              #
+#                    MASKER ENTEGRASYONU - MULTI-SITE MİMARİSİ                 #
+#                                                                              #
+################################################################################
+
+================================================================================
+                         NEDEN MULTI-SITE MİMARİSİ?
+================================================================================
+
+[PROBLEM: KLASÖR EKLEME YAKLAŞIMI]
+----------------------------------
+Her yeni site için:
+  - Yeni klasör oluştur
+  - Kodu kopyala/yapıştır
+  - Ayrı veritabanı veya tablo
+  - Ayrı deployment
+  - Bakım karmaşıklığı
+
+MASKER/
+├── PortfolioUI/      # Site 1 - mehmetasker.com
+├── Site2UI/          # Site 2 - başkasite.com
+├── Site3UI/          # Site 3 - yenisite.com
+└── ...               # Her site için yeni klasör = YANLIŞ!
+
+[ÇÖZÜM: API İLE MULTI-SITE]
+---------------------------
+Tek API + Tek Veritabanı = Sınırsız site yönetimi
+
+                    ┌─────────────────────────┐
+                    │      MASKER API         │
+                    │    (Tek Backend)        │
+                    │                         │
+                    │  ┌─────────────────┐    │
+                    │  │   Site Modülü   │    │
+                    │  │   SEO Modülü    │    │
+                    │  │   Blog Modülü   │    │
+                    │  │   Proje Modülü  │    │
+                    │  └─────────────────┘    │
+                    └───────────┬─────────────┘
+                                │
+           ┌────────────────────┼────────────────────┐
+           │                    │                    │
+           ▼                    ▼                    ▼
+    ┌─────────────┐      ┌─────────────┐      ┌─────────────┐
+    │   Site 1    │      │   Site 2    │      │   Site 3    │
+    │ mehmetasker │      │  başkasite  │      │  yenisite   │
+    │    .com     │      │    .com     │      │    .com     │
+    │             │      │             │      │             │
+    │ React/Vue   │      │ React/Vue   │      │ React/Vue   │
+    │ veya Static │      │ veya Static │      │ veya Static │
+    └─────────────┘      └─────────────┘      └─────────────┘
+
+[KARŞILAŞTIRMA]
+---------------
+Özellik                 Klasör Ekleme       Multi-Site API
+----------------------------------------------------------------
+Yeni site ekleme        Kod yazılır         Admin panelden tıkla
+Bakım                   Her site ayrı       Tek merkez
+SEO Yönetimi            Her sitede ayrı     Tek panel
+Veritabanı              Ayrı/Karmaşık       Tek DB
+Ölçeklenebilirlik       Düşük               Yüksek
+Deployment              Her site ayrı       Tek API deploy
+Kod tekrarı             Çok                 Yok
+Güncelleme              Her sitede ayrı     Tek yerde
+
+
+================================================================================
+                         YENİ ENTITY: Site (TENANT)
+================================================================================
+
+public class Site
+{
+    // Primary Key
+    public int Id { get; set; }
+
+    // Temel Bilgiler
+    public string Name { get; set; }              // "Mehmet Asker"
+    public string Domain { get; set; }            // "mehmetasker.com"
+    public string Slug { get; set; }              // "mehmetasker"
+    public string Description { get; set; }       // Site açıklaması
+    public string LogoUrl { get; set; }           // Site logosu
+    public string FaviconUrl { get; set; }        // Favicon
+
+    // Durum
+    public bool IsActive { get; set; }            // Aktif mi?
+    public bool IsDefault { get; set; }           // Varsayılan site mi?
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+
+    // İlişkiler - Her sitenin kendi verileri
+    public SiteSettings Settings { get; set; }
+    public ICollection<Page> Pages { get; set; }
+    public ICollection<Blog> Blogs { get; set; }
+    public ICollection<Project> Projects { get; set; }
+    public ICollection<Music> Musics { get; set; }
+    public ICollection<SocialMedia> SocialMedias { get; set; }
+}
+
+
+================================================================================
+                         GÜNCELLENMİŞ ENTITY'LER (SiteId Eklendi)
+================================================================================
+
+[Page - Güncelleme]
+-------------------
+public class Page
+{
+    public int Id { get; set; }
+
+    // YENİ: Site ilişkisi
+    public int SiteId { get; set; }
+    public Site Site { get; set; }
+
+    // Mevcut alanlar...
+    public string Name { get; set; }
+    public string Slug { get; set; }
+    // ...
+}
+
+[Blog - Güncelleme]
+-------------------
+public class Blog
+{
+    public int Id { get; set; }
+
+    // YENİ: Site ilişkisi
+    public int SiteId { get; set; }
+    public Site Site { get; set; }
+
+    // Mevcut alanlar...
+    public string Title { get; set; }
+    public string Slug { get; set; }
+    // ...
+}
+
+[Project - Güncelleme]
+----------------------
+public class Project
+{
+    public int Id { get; set; }
+
+    // YENİ: Site ilişkisi
+    public int SiteId { get; set; }
+    public Site Site { get; set; }
+
+    // Mevcut alanlar...
+    public string Name { get; set; }
+    // ...
+}
+
+[SiteSettings - Güncelleme]
+---------------------------
+public class SiteSettings
+{
+    public int Id { get; set; }
+
+    // YENİ: Site ilişkisi (1-1)
+    public int SiteId { get; set; }
+    public Site Site { get; set; }
+
+    // Mevcut alanlar...
+    public string SiteName { get; set; }
+    public string SiteUrl { get; set; }
+    // ...
+}
+
+
+================================================================================
+                         VERİTABANI ŞEMASI (Multi-Site)
+================================================================================
+
+[TABLO YAPISI]
+--------------
+
+SITES (Ana Site Tablosu)
+├── Id (PK)
+├── Name
+├── Domain
+├── Slug (Unique)
+├── Description
+├── LogoUrl
+├── FaviconUrl
+├── IsActive
+├── IsDefault
+├── CreatedAt
+└── UpdatedAt
+
+SITE_SETTINGS (1-1 ilişki)
+├── Id (PK)
+├── SiteId (FK -> SITES) [Unique]
+├── ... (mevcut alanlar)
+└── ...
+
+PAGES (Site başına sayfalar)
+├── Id (PK)
+├── SiteId (FK -> SITES)
+├── ... (mevcut alanlar)
+└── INDEX: IX_Pages_SiteId_Slug (SiteId, Slug) [Unique]
+
+BLOGS (Site başına bloglar)
+├── Id (PK)
+├── SiteId (FK -> SITES)
+├── ... (mevcut alanlar)
+└── INDEX: IX_Blogs_SiteId_Slug (SiteId, Slug) [Unique]
+
+PROJECTS (Site başına projeler)
+├── Id (PK)
+├── SiteId (FK -> SITES)
+├── ... (mevcut alanlar)
+└── INDEX: IX_Projects_SiteId_Slug (SiteId, Slug) [Unique]
+
+
+================================================================================
+                         API ENDPOINT'LERİ (Multi-Site)
+================================================================================
+
+[SİTE YÖNETİMİ]
+---------------
+GET     /api/sites                      # Tüm siteleri listele
+GET     /api/sites/{id}                 # Site detayı
+GET     /api/sites/domain/{domain}      # Domain'e göre site bul
+POST    /api/sites                      # Yeni site oluştur
+PUT     /api/sites/{id}                 # Site güncelle
+DELETE  /api/sites/{id}                 # Site sil
+
+[SİTE BAZLI VERİLER]
+--------------------
+# Sayfalar
+GET     /api/sites/{siteId}/pages       # Sitenin sayfaları
+POST    /api/sites/{siteId}/pages       # Siteye sayfa ekle
+
+# Bloglar
+GET     /api/sites/{siteId}/blogs       # Sitenin blogları
+POST    /api/sites/{siteId}/blogs       # Siteye blog ekle
+
+# Projeler
+GET     /api/sites/{siteId}/projects    # Sitenin projeleri
+POST    /api/sites/{siteId}/projects    # Siteye proje ekle
+
+# SEO
+GET     /api/sites/{siteId}/seo/pages/{pageId}  # Sayfa SEO bilgisi
+PUT     /api/sites/{siteId}/seo/pages/{pageId}  # Sayfa SEO güncelle
+
+# Sitemap
+GET     /api/sites/{siteId}/sitemap     # Site sitemap (XML)
+
+[ALTERNATİF: DOMAIN BAZLI]
+--------------------------
+# Header'dan domain alınır: X-Site-Domain: mehmetasker.com
+GET     /api/pages                      # Aktif sitenin sayfaları
+GET     /api/blogs                      # Aktif sitenin blogları
+GET     /api/sitemap.xml                # Aktif sitenin sitemap'i
+
+
+================================================================================
+                         MASKER ENTEGRASYON PLANI
+================================================================================
+
+[MEVCUT MASKER YAPISI]
+----------------------
+MASKER/
+├── ApiUI/              # REST API ✓
+├── AdminUI/            # Yönetim Paneli ✓
+├── WebUI/              # Haber Sitesi ✓
+├── Domain/             # Entity'ler ✓
+├── Application/        # CQRS ✓
+├── Infrastructure/     # Altyapı ✓
+├── DataAccess/         # Repository ✓
+└── ...
+
+[EKLENECEKLER]
+--------------
+MASKER/
+├── Domain/
+│   └── Entities/
+│       ├── Site.cs                 # YENİ
+│       ├── Page.cs                 # YENİ (SEO)
+│       ├── MetaTag.cs              # YENİ (SEO)
+│       ├── OpenGraph.cs            # YENİ (SEO)
+│       ├── TwitterCard.cs          # YENİ (SEO)
+│       ├── StructuredData.cs       # YENİ (SEO)
+│       └── ... (mevcut entity'ler SiteId ile güncellenir)
+│
+├── Application/
+│   └── Features/
+│       ├── Sites/                  # YENİ
+│       │   ├── Commands/
+│       │   └── Queries/
+│       └── Seo/                    # YENİ
+│           ├── Commands/
+│           └── Queries/
+│
+├── ApiUI/
+│   └── Controllers/
+│       ├── SitesController.cs      # YENİ
+│       ├── SeoController.cs        # YENİ
+│       └── SitemapController.cs    # YENİ
+│
+└── AdminUI/
+    └── Controllers/
+        ├── SiteYonetimController.cs    # YENİ
+        └── SeoYonetimController.cs     # YENİ
+
+
+================================================================================
+                         FRONTEND STRATEJİSİ
+================================================================================
+
+[SEÇENEK 1: REACT SPA (Mevcut 2.sitem)]
+---------------------------------------
+- 2.sitem React uygulaması olduğu gibi kalır
+- API'den veri çeker
+- Build edilip static olarak sunulur
+- Her site için ayrı build veya dinamik config
+
+Avantajları:
+  + Mevcut kod kullanılır
+  + React ekosistemi
+  + Zengin animasyonlar (Framer Motion)
+
+Dezavantajları:
+  - Her site için build gerekebilir
+  - SEO için SSR/Pre-rendering gerekli
+
+[SEÇENEK 2: NEXT.JS (SSR + SSG)]
+--------------------------------
+- Server-side rendering
+- Static site generation
+- API routes
+- SEO dostu
+
+Avantajları:
+  + SEO mükemmel
+  + Performans yüksek
+  + Hibrit rendering
+
+Dezavantajları:
+  - Mevcut kod migration gerekir
+  - Öğrenme eğrisi
+
+[SEÇENEK 3: STATIK SITE + API]
+------------------------------
+- HTML/CSS/JS statik dosyalar
+- JavaScript ile API'den veri çekme
+- Her site için ayrı template
+
+Avantajları:
+  + En basit
+  + Hızlı
+  + CDN ile kolay dağıtım
+
+Dezavantajları:
+  - Dinamik özellikler sınırlı
+  - Her değişiklikte rebuild
+
+[ÖNERİLEN: SEÇENEK 1 + PRE-RENDERING]
+-------------------------------------
+- React (mevcut 2.sitem) kullan
+- react-snap veya prerender.io ile pre-rendering
+- API'den SEO verileri çek
+- react-helmet ile dinamik meta taglar
+
+
+================================================================================
+                         MASKER + SEO PANEL ENTEGRASYON ADIMLARI
+================================================================================
+
+AŞAMA   AÇIKLAMA                                        SÜRE    DURUM
+--------------------------------------------------------------------------------
+M1      MASKER Domain'e Site entity ekle                1 gün   [ ] Bekliyor
+M2      Mevcut entity'lere SiteId ekle                  1 gün   [ ] Bekliyor
+M3      SEO entity'lerini MASKER Domain'e ekle          1 gün   [ ] Bekliyor
+M4      Migration oluştur ve çalıştır                   0.5 gün [ ] Bekliyor
+M5      Application layer - Site CQRS                   2 gün   [ ] Bekliyor
+M6      Application layer - SEO CQRS                    2 gün   [ ] Bekliyor
+M7      API Controller'ları ekle                        1 gün   [ ] Bekliyor
+M8      AdminUI - Site Yönetim sayfası                  2 gün   [ ] Bekliyor
+M9      AdminUI - SEO Yönetim sayfası                   2 gün   [ ] Bekliyor
+M10     React frontend API entegrasyonu                 2 gün   [ ] Bekliyor
+M11     Test ve hata düzeltme                           1 gün   [ ] Bekliyor
+--------------------------------------------------------------------------------
+TOPLAM                                                  15.5 gün
+
+
+================================================================================
+                         SEED DATA - VARSAYILAN SİTE
+================================================================================
+
+// İlk site: mehmetasker.com
+var defaultSite = new Site
+{
+    Name = "Mehmet Asker",
+    Domain = "mehmetasker.com",
+    Slug = "mehmetasker",
+    Description = "Kişisel gelişim, yaşam koçluğu, yazarlık ve yazılım geliştirme",
+    IsActive = true,
+    IsDefault = true,
+    Settings = new SiteSettings
+    {
+        SiteName = "Mehmet Asker",
+        SiteUrl = "https://mehmetasker.com",
+        DefaultLocale = "tr_TR",
+        DefaultLanguage = "tr",
+        DefaultAuthor = "Mehmet Asker",
+        ThemeColor = "#000000"
+    },
+    SocialMedias = new List<SocialMedia>
+    {
+        new SocialMedia { Platform = SocialPlatform.Facebook, Url = "https://www.facebook.com/profile.php?id=717434260" },
+        new SocialMedia { Platform = SocialPlatform.Twitter, Url = "https://twitter.com/MehmetAsker10" },
+        new SocialMedia { Platform = SocialPlatform.Instagram, Url = "https://www.instagram.com/m3hm3t_ask3r/" }
+    }
+};
+
+
+================================================================================
+                         ADMIN PANELİ - SİTE YÖNETİMİ EKRANI
+================================================================================
+
+[SAYFA: /Admin/SiteYonetim]
+---------------------------
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  MASKER Admin - Site Yönetimi                              [+ Yeni Site]    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ ID │ Site Adı        │ Domain            │ Durum  │ İşlemler        │   │
+│  ├────┼─────────────────┼───────────────────┼────────┼─────────────────┤   │
+│  │ 1  │ Mehmet Asker    │ mehmetasker.com   │ Aktif  │ [SEO] [Düzenle] │   │
+│  │ 2  │ Başka Site      │ baskasite.com     │ Aktif  │ [SEO] [Düzenle] │   │
+│  │ 3  │ Test Site       │ test.com          │ Pasif  │ [SEO] [Düzenle] │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+[SAYFA: /Admin/SiteYonetim/Seo/{siteId}]
+----------------------------------------
+
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  MASKER Admin - SEO Yönetimi: mehmetasker.com                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  [Sayfalar] [Bloglar] [Projeler] [Genel Ayarlar]                           │
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ Sayfa       │ URL     │ Title                    │ Description │ OG │   │
+│  ├─────────────┼─────────┼──────────────────────────┼─────────────┼────┤   │
+│  │ Ana Sayfa   │ /       │ Mehmet Asker | Kişisel...│ ✓           │ ✓  │   │
+│  │ Hakkımda    │ /about  │ Hakkımda | Mehmet Asker  │ ✓           │ ✗  │   │
+│  │ Blog        │ /blog   │ Blog | Mehmet Asker      │ ✓           │ ✗  │   │
+│  │ Projeler    │ /work   │ Projeler | Mehmet Asker  │ ✓           │ ✗  │   │
+│  │ Yetenekler  │ /skills │ Yetenekler | Mehmet...   │ ✓           │ ✗  │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│  [Sitemap Oluştur]  [SEO Analizi]  [Önizleme]                              │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+
+================================================================================
+                                    SON
+================================================================================

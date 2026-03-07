@@ -54,6 +54,7 @@ const BLOG = styled(NavLink)`
 
   @media screen and (max-width: 800px) {
     top: 45%;
+    color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   }
 `;
 
@@ -173,7 +174,13 @@ const Center = styled.button`
 
   @media screen and (max-width: 800px) {
     top: ${(props) => (props.click ? "85%" : "50%")};
-    left: ${(props) => (props.click ? "50%" : "50%")};
+    left: ${(props) => (props.click ? "85%" : "50%")};
+
+    & > :first-child {
+      width: ${(props) => (props.click ? "60px" : "150px")};
+      height: ${(props) => (props.click ? "60px" : "150px")};
+      transition: width 1s ease, height 1s ease;
+    }
   }
 `;
 
@@ -209,7 +216,7 @@ const Main = (props) => {
       <Container>
         <PowerButton />
         <LogoComponent theme={click ? "dark" : "light"} />
-        <SocialIcons theme={click ? "dark" : "light"} />
+        <SocialIcons theme={click ? "dark" : "light"} click={click} />
 
         <Center click={click}>
           <CasinoChip
@@ -239,7 +246,7 @@ const Main = (props) => {
           </motion.h2>
         </Contact>
 
-        <BLOG to="/blog" click={click}>
+        <BLOG to="/blog" click={click ? 1 : 0}>
           <motion.h2
             initial={{
               y: -200,

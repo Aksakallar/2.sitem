@@ -204,6 +204,74 @@ export const lightTheme = {
 }
 ```
 
+## 🔍 SEO Kontrol Çizelgesi
+
+### Temel SEO Ayarları
+
+| Özellik | Durum | Dosya |
+|---------|-------|-------|
+| Dil etiketi (lang="tr") | ✅ | `public/index.html` |
+| Meta Description | ✅ | `public/index.html` |
+| Meta Keywords | ✅ | `public/index.html` |
+| Meta Author | ✅ | `public/index.html` |
+| Meta Robots | ✅ | `public/index.html` |
+| Canonical URL | ✅ | `public/index.html` |
+| Viewport | ✅ | `public/index.html` |
+| Title | ✅ | `public/index.html` |
+
+### Open Graph (Facebook/LinkedIn)
+
+| Özellik | Durum | Değer |
+|---------|-------|-------|
+| og:type | ✅ | website |
+| og:url | ✅ | https://mehmetasker.com/ |
+| og:title | ✅ | Mehmet Asker \| Kişisel Gelişim, Yaşam Koçluğu & Yazılım |
+| og:description | ✅ | Tamamlandı |
+| og:image | ⚠️ | `og-image.jpg` oluşturulmalı (1200x630 px) |
+| og:locale | ✅ | tr_TR |
+| og:site_name | ✅ | Mehmet Asker |
+
+### Twitter Card
+
+| Özellik | Durum | Değer |
+|---------|-------|-------|
+| twitter:card | ✅ | summary_large_image |
+| twitter:url | ✅ | https://mehmetasker.com/ |
+| twitter:title | ✅ | Tamamlandı |
+| twitter:description | ✅ | Tamamlandı |
+| twitter:image | ⚠️ | `og-image.jpg` oluşturulmalı (1200x630 px) |
+
+### Structured Data (JSON-LD)
+
+| Özellik | Durum | Değer |
+|---------|-------|-------|
+| @type | ✅ | Person |
+| name | ✅ | Mehmet Asker |
+| url | ✅ | https://mehmetasker.com |
+| jobTitle | ✅ | Yaşam Koçu, Yazar, Yazılım Geliştirici |
+| knowsAbout | ✅ | 9 alan tanımlı |
+| sameAs | ✅ | Facebook, X (Twitter), Instagram |
+
+### SEO Dosyaları
+
+| Dosya | Durum | Açıklama |
+|-------|-------|----------|
+| `robots.txt` | ✅ | Sitemap referansı ve crawl-delay mevcut |
+| `sitemap.xml` | ✅ | 5 sayfa tanımlı |
+| `manifest.json` | ✅ | PWA ayarları, Türkçe |
+| `og-image.jpg` | ❌ | 1200x630 px oluşturulmalı |
+
+### Yayın Öncesi Yapılacaklar
+
+- [ ] `og-image.jpg` dosyası oluştur (1200x630 px) ve `public/` klasörüne ekle
+- [ ] Google Search Console'a siteyi ekle
+- [ ] Sitemap.xml'i Google Search Console'a gönder
+- [x] JSON-LD `sameAs` alanına sosyal medya linklerini ekle
+- [ ] PageSpeed Insights ile performans testi yap
+- [ ] Rich Results Test ile structured data doğrula
+
+---
+
 ## 🌐 Deployment
 
 ### Netlify ile Deploy

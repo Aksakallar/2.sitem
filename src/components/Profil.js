@@ -94,10 +94,10 @@ const AltBox = styled.div`
 
 const Text = styled.span`
 
-font-size: calc(.8em + 1.5vw); 
+font-size: calc(.8em + 1.5vw);
 color: ${(props) => props.theme.body};
-padding: 2rem; 
-cursor: pointer; 
+padding: 2rem;
+cursor: pointer;
 
 display: flex;
 flex-direction: column;
@@ -112,15 +112,23 @@ justify-content: space-evenly;
 
 @media screen and (max-width: 800px) {
     width: 100%;
-    h3{
-        margin-top: 1rem;
+    font-size: calc(0.6em + 1.2vw);
+    text-align: center;
+
+    h1 {
+        font-size: calc(1rem + 1.5vw);
+        text-align: left;
     }
-    &>*:last-child{
+    h3 {
         margin-top: 0.5rem;
-        font-size: calc(0.5rem + 1.5vw);
+        font-size: calc(0.7rem + 1.2vw);
     }
-
-
+    &>*:last-child {
+        margin-top: 0.5rem;
+        font-size: calc(0.5rem + 1.2vw);
+        text-align: right;
+    }
+}
 `;
 
 const Profil = () => {
