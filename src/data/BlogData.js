@@ -7,6 +7,8 @@ export const Blogs = [
     imgSrc:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ32TQyWJ0OM17k2WKjhzaz9vPyphhtx6V23w&usqp=CAU",
     link: "",
+    summary:
+      "In this post, I share my journey designing a personal blog from scratch — the challenges, the technologies I chose, and the lessons learned along the way. From late-night coding sessions to that final 'aha!' moment, it was totally worth it.",
     description: `<div class="article-content">
 
       <p>Hey there! Today I want to share one of my favorite projects with you. I worked on a blog design, and trust me, this journey was both challenging and incredibly fun. Those late nights coding while sipping my coffee... But the result? Totally worth it!</p>
@@ -58,6 +60,8 @@ export const Blogs = [
     imgSrc:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ32TQyWJ0OM17k2WKjhzaz9vPyphhtx6V23w&usqp=CAU",
     link: "",
+    summary:
+      "From satellite systems to live casino operations to React development — discover how a non-traditional background shaped a unique approach to building a personal portfolio site with modern tools and smooth animations.",
     description: `<div class="article-content">
 
   <p>
@@ -133,6 +137,8 @@ export const Blogs = [
     imgSrc:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ32TQyWJ0OM17k2WKjhzaz9vPyphhtx6V23w&usqp=CAU",
     link: "",
+    summary:
+      "A deep dive into designing a minimalist e-commerce interface using Figma and Shopify, applying Design Thinking principles at every stage — from user research and wireframes all the way to a high-fidelity, developer-ready prototype.",
     description: `<div class="article-content">
   <h2>Minimalist E-Commerce Interface Design</h2>
   <p><strong>Date:</strong> April 28, 2026</p>
