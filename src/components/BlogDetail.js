@@ -7,7 +7,7 @@ import img from "../assets/Images/Kitaplar.jpg";
 import SocialIcon from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import LogoComponent from "../subComponents/LogoComponent";
-import { Blogs } from "../data/BlogData";
+import { useBlogDetail } from "../hooks/useBlogApi";
 
 const MainContainer = styled(motion.div)`
   background-image: url(${img});
@@ -233,7 +233,22 @@ const NotFound = styled.div`
 
 const BlogDetail = () => {
   const { id } = useParams();
-  const blog = Blogs.find((blog) => blog.id === parseInt(id));
+  const { blog, loading } = useBlogDetail(id);
+
+  if (loading) {
+    return (
+      <MainContainer initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+        <Container>
+          <LogoComponent />
+          <PowerButton />
+          <SocialIcon />
+          <BlogContainer>
+            <NotFound>Yükleniyor...</NotFound>
+          </BlogContainer>
+        </Container>
+      </MainContainer>
+    );
+  }
 
   if (!blog) {
     return (

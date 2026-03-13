@@ -8,8 +8,8 @@ import PowerButton from "../subComponents/PowerButton";
 import LogoComponent from "../subComponents/LogoComponent";
 import AnaTitle from "../subComponents/AnaTitle";
 
-import { Blogs } from "../data/BlogData";
 import BlogPageCom from "./BlogPageCom";
+import { useBlogList } from "../hooks/useBlogApi";
 
 import KancaSup from "../subComponents/KancaSup";
 
@@ -79,6 +79,7 @@ const container = {
 
 const BlogPage = () => {
   const [numbers, setNumbers] = useState(0);
+  const { blogs } = useBlogList();
 
   useEffect(() => {
     let num = (window.innerHeight - 70) / 30;
@@ -103,7 +104,7 @@ const BlogPage = () => {
 
         <Center>
           <Grid>
-            {Blogs.map((blog) => {
+            {blogs.map((blog) => {
               return <BlogPageCom key={blog.id} blog={blog} />;
             })}
           </Grid>
