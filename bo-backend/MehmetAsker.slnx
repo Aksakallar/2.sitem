@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="MehmetAsker.API/MehmetAsker.API.csproj" />
+  <Project Path="MehmetAsker.Application/MehmetAsker.Application.csproj" />
+  <Project Path="MehmetAsker.DataAccess/MehmetAsker.DataAccess.csproj" />
+  <Project Path="MehmetAsker.Domain/MehmetAsker.Domain.csproj" />
+</Solution>

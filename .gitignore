@@ -1,3 +1,19 @@
+# React frontend
 node_modules
 build/
 .env
+
+# Backend
+bo-backend/**/bin/
+bo-backend/**/obj/
+bo-backend/**/*.user
+bo-backend/**/.env
+bo-backend/**/appsettings.Development.json
+
+# BO Panel
+bo-panel/.next/
+bo-panel/node_modules/
+bo-panel/.env.local
+bo-panel/.env*.local
+# Local Netlify folder
+.netlify

@@ -1,39 +1,37 @@
 import { useState, useEffect } from "react";
 import { Blogs } from "../data/BlogData";
+import { fetchPosts, fetchPostById } from "../config/api";
 
-const API_URL = "http://localhost:5100";
-
-const mapBlogFromApi = (blog) => ({
-  id: blog.id,
-  name: blog.baslik,
-  tags: blog.etiketListesi || [],
-  date: blog.yayinTarihi
-    ? new Date(blog.yayinTarihi).toLocaleDateString("tr-TR", {
+const mapPost = (p) => ({
+  id: p.id,
+  name: p.title,
+  tags: p.tags ? p.tags.split(",").map((t) => t.trim()).filter(Boolean) : [],
+  date: p.publishedAt
+    ? new Date(p.publishedAt).toLocaleDateString("tr-TR", {
         year: "numeric",
         month: "long",
         day: "numeric",
       })
     : "",
-  imgSrc: blog.gorselUrl || "",
-  description: blog.icerik || "",
-  link: "",
+  imgSrc: p.coverImage || "",
+  summary: p.summary || "",
+  description: p.content || "",
 });
 
 export const useBlogList = () => {
-  const [blogs, setBlogs] = useState(Blogs);
+  const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${API_URL}/api/Blog/GetAktifBloglar`)
-      .then((res) => res.json())
-      .then((data) => {
+    fetchPosts()
+      .then(({ data }) => {
         if (Array.isArray(data) && data.length > 0) {
-          setBlogs(data.map(mapBlogFromApi));
+          setBlogs(data.map(mapPost));
+        } else {
+          setBlogs(Blogs); // fallback
         }
       })
-      .catch(() => {
-        // API bağlantısı yoksa BlogData.js'deki statik veriler kullanılır
-      })
+      .catch(() => setBlogs(Blogs))
       .finally(() => setLoading(false));
   }, []);
 
@@ -45,15 +43,18 @@ export const useBlogDetail = (id) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`${API_URL}/api/Blog/GetBlogById?blogId=${id}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Not found");
-        return res.json();
+    fetchPostById(id)
+      .then((data) => {
+        if (data) {
+          setBlog(mapPost(data));
+        } else {
+          // Fallback: statik veriden ID ile bul
+          const staticBlog = Blogs.find((b) => String(b.id) === String(id));
+          setBlog(staticBlog || null);
+        }
       })
-      .then((data) => setBlog(mapBlogFromApi(data)))
       .catch(() => {
-        // API'den bulunamazsa statik veriden aranır
-        const staticBlog = Blogs.find((b) => b.id === parseInt(id));
+        const staticBlog = Blogs.find((b) => String(b.id) === String(id));
         setBlog(staticBlog || null);
       })
       .finally(() => setLoading(false));

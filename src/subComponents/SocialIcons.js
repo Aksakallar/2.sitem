@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import {  Twitter, Facebook, Instagram} from '../components/AllSvgs'
 import {DarkTheme} from "../components/Themes";
 import { motion } from 'framer-motion'
+import { fetchSocialLinks } from '../config/api'
+
+const ICON_MAP = { Twitter, Facebook, Instagram };
+
+const DEFAULT_LINKS = [
+  { platform: 'Facebook', url: 'https://www.facebook.com/profile.php?id=717434260' },
+  { platform: 'Twitter', url: 'https://twitter.com/MehmetAsker10' },
+  { platform: 'Instagram', url: 'https://www.instagram.com/m3hm3t_ask3r/' },
+];
 
 
 
@@ -45,54 +54,46 @@ const Icons = styled.div`
 
 
 const SocialIcons = (props) => {
+  const [links, setLinks] = useState(DEFAULT_LINKS);
+
+  useEffect(() => {
+    fetchSocialLinks()
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setLinks(data.filter(l => l.isVisible !== false));
+        }
+      })
+      .catch(() => {});
+  }, []);
+
+  const fill = props.theme === "dark" ? DarkTheme.text : DarkTheme.body;
+
   return (
     <Icons click={props.click}>
-        
-        <motion.div 
+      {links.map((link, i) => {
+        const Icon = ICON_MAP[link.platform];
+        if (!Icon) return null;
+        return (
+          <motion.div
+            key={link.platform}
             initial={{transition:"scale(0)"}}
             animate={{scale:[0,1,1.5,1]}}
-            transition={{type:'spring', duration:1, delay:1}}
-        >
-            <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.facebook.com/profile.php?id=717434260"}}>
-                <Facebook width={25} height={25} fill={props.theme === "dark" ?  DarkTheme.text : DarkTheme.body }/>
+            transition={{type:'spring', duration:1, delay: 1 + i * 0.2}}
+          >
+            <NavLink style={{color:'inherit'}} target="_blank" to={{pathname: link.url}}>
+              <Icon width={25} height={25} fill={fill} />
             </NavLink>
-        </motion.div>
+          </motion.div>
+        );
+      })}
 
-        <motion.div 
-            initial={{transition:"scale(0)"}}
-            animate={{scale:[0,1,1.5,1]}}
-            transition={{type:'spring', duration:1, delay:1.2}}
-        >
-            <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://twitter.com/MehmetAsker10"}}>
-                <Twitter width={25} height={25} fill={props.theme === "dark" ?  DarkTheme.text : DarkTheme.body }/>
-            </NavLink>
-        </motion.div>
-
-      
-
-        <motion.div 
-            initial={{transition:"scale(0)"}}
-            animate={{scale:[0,1,1.5,1]}}
-            transition={{type:'spring', duration:1, delay:1.4}}
-        >
-            <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.instagram.com/m3hm3t_ask3r/"}}>
-                <Instagram width={25} height={25} fill={props.theme === "dark" ?  DarkTheme.text : DarkTheme.body }/>
-            </NavLink>
-        </motion.div>
-
-        <Line color={props.theme} click={props.click}
-            initial={{
-                height:0
-            }}
-            animate={{
-                height:'8rem'
-            }}
-            transition={{
-                type:'spring', duration:1, delay:0.9
-            }}
-        />
+      <Line color={props.theme} click={props.click}
+        initial={{ height:0 }}
+        animate={{ height:'8rem' }}
+        transition={{ type:'spring', duration:1, delay:0.9 }}
+      />
     </Icons>
-  )
+  );
 }
 
 export default SocialIcons

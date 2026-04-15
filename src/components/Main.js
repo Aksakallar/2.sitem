@@ -135,6 +135,16 @@ const Reference = styled(NavLink)`
   }
 `;
 
+const SERVICES = styled(NavLink)`
+  color: ${(props) => props.theme.text};
+  text-decoration: none;
+  z-index: 1;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+
 const rotate = keyframes`
 
   from{
@@ -314,6 +324,23 @@ const Main = (props) => {
               My Skills
             </motion.h2>
           </Reference>
+
+          <SERVICES to="/services">
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Services
+            </motion.h2>
+          </SERVICES>
         </BottomBar>
 
         {/* Mobile Layout - 800px altı için ayrı elementler */}

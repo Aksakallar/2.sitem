@@ -1,0 +1,36 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: mehmetasker_postgres
+    environment:
+      POSTGRES_DB: MehmetAskerDB
+      POSTGRES_USER: ma_admin
+      POSTGRES_PASSWORD: MehmetAsker2026!SecurePass
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ma_admin -d MehmetAskerDB"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: mehmetasker_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@mehmetasker.com
+      PGADMIN_DEFAULT_PASSWORD: MehmetAskerAdmin2026!
+    ports:
+      - "5051:80"
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+
+volumes:
+  postgres_data:
+  pgadmin_data:

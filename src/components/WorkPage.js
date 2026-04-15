@@ -1,4 +1,4 @@
-import React, {useRef, useEffect}from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components'
 import {DarkTheme} from './Themes';
 import {motion} from 'framer-motion';
@@ -10,6 +10,7 @@ import SocialIcons from '../subComponents/SocialIcons';
 
 import { CasinoChip } from './AllSvgs';
 import Card from '../subComponents/Card';
+import { fetchProjects } from '../config/api';
 import {Work} from "../data/WorkData"
 
 
@@ -74,7 +75,24 @@ import {Work} from "../data/WorkData"
   }
 
 const WorkPage = () => {
+  const [projects, setProjects] = useState(Work);
 
+  useEffect(() => {
+    fetchProjects()
+      .then((data) => {
+        if (Array.isArray(data) && data.length > 0) {
+          setProjects(data.map((p) => ({
+            id: p.id,
+            name: p.title,
+            description: p.description || "",
+            tags: p.tags ? JSON.parse(p.tags) : [],
+            demo: p.liveUrl || "",
+            github: p.gitHubUrl || "",
+          })));
+        }
+      })
+      .catch(() => {}); // fallback: WorkData
+  }, []);
 
   const ref = useRef(null)
   const casinochip = useRef(null)
@@ -106,7 +124,7 @@ const WorkPage = () => {
 
         <Main ref={ref} variants={container} initial='hidden' animate='show'>
           {
-            Work.map(d => <Card key={d.id} data={d}/>)
+            projects.map(d => <Card key={d.id} data={d}/>)
           }
         </Main>
         

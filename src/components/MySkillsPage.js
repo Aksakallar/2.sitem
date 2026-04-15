@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { lightTheme } from './Themes';
 import { Design } from './AllSvgs';
@@ -7,19 +7,20 @@ import PowerButton from '../subComponents/PowerButton';
 import SocialIcons from '../subComponents/SocialIcons';
 import CellComponent from '../subComponents/CellComponent';
 import AnaTitle from '../subComponents/AnaTitle';
+import { fetchSkills } from '../config/api';
 
 const CDN = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
 
-const TECH_STACK = [
-  { label: "HTML",       src: `${CDN}/html5/html5-original.svg` },
-  { label: "CSS",        src: `${CDN}/css3/css3-original.svg` },
-  { label: "JavaScript", src: `${CDN}/javascript/javascript-original.svg` },
-  { label: "React",      src: `${CDN}/react/react-original.svg` },
-  { label: "C#",         src: `${CDN}/csharp/csharp-original.svg` },
-  { label: "Next.js",    src: `${CDN}/nextjs/nextjs-original.svg` },
-  { label: "SASS",       src: `${CDN}/sass/sass-original.svg` },
-  { label: "Figma",      src: `${CDN}/figma/figma-original.svg` },
-  { label: "GitHub",     src: `${CDN}/github/github-original.svg` },
+const FALLBACK_SKILLS = [
+  { name: "HTML",       iconUrl: `${CDN}/html5/html5-original.svg` },
+  { name: "CSS",        iconUrl: `${CDN}/css3/css3-original.svg` },
+  { name: "JavaScript", iconUrl: `${CDN}/javascript/javascript-original.svg` },
+  { name: "React",      iconUrl: `${CDN}/react/react-original.svg` },
+  { name: "C#",         iconUrl: `${CDN}/csharp/csharp-original.svg` },
+  { name: "Next.js",    iconUrl: `${CDN}/nextjs/nextjs-original.svg` },
+  { name: "SASS",       iconUrl: `${CDN}/sass/sass-original.svg` },
+  { name: "Figma",      iconUrl: `${CDN}/figma/figma-original.svg` },
+  { name: "GitHub",     iconUrl: `${CDN}/github/github-original.svg` },
 ];
 
 // ─── Styled Components ────────────────────────────────────────────────────────
@@ -148,6 +149,17 @@ const TechLabel = styled.span`
 
 // ─── Bileşen ──────────────────────────────────────────────────────────────────
 const MySkillsPage = () => {
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    fetchSkills().then(data => {
+      if (data && data.length > 0) setSkills(data);
+      else setSkills(FALLBACK_SKILLS);
+    });
+  }, []);
+
+  const displaySkills = skills.length > 0 ? skills : FALLBACK_SKILLS;
+
   return (
     <ThemeProvider theme={lightTheme}>
       <Box>
@@ -180,10 +192,13 @@ const MySkillsPage = () => {
         <Panel>
           <Title>⚙ Tech Stack</Title>
           <TechGrid>
-            {TECH_STACK.map((tech) => (
-              <TechTile key={tech.label}>
-                <TechIcon src={tech.src} alt={tech.label} />
-                <TechLabel>{tech.label}</TechLabel>
+            {displaySkills.map((skill, i) => (
+              <TechTile key={skill.id || i}>
+                {skill.iconUrl
+                  ? <TechIcon src={skill.iconUrl} alt={skill.name} />
+                  : <TechIcon src={`${CDN}/${skill.name.toLowerCase()}/${skill.name.toLowerCase()}-original.svg`} alt={skill.name} />
+                }
+                <TechLabel>{skill.name}</TechLabel>
               </TechTile>
             ))}
           </TechGrid>

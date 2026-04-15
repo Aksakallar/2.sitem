@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled, { ThemeProvider, keyframes } from 'styled-components'
 import { DarkTheme } from './Themes';
 import LogoComponent from '../subComponents/LogoComponent';
@@ -7,6 +7,7 @@ import SocialIcons from '../subComponents/SocialIcons';
 import CellComponent from '../subComponents/CellComponent';
 import AnaTitle from '../subComponents/AnaTitle';
 import uzayadami from '../assets/Images/spaceman.png';
+import { fetchAbout } from '../config/api';
 
 const Box = styled.div`
   background-color: ${props => props.theme.body};
@@ -115,7 +116,23 @@ const Para = styled.p`
   }
 `
 
+const FALLBACK = {
+  fullName: 'Mehmet Asker',
+  title: 'Agile Coach & Technical Mentor',
+  bio: "My journey has taken me through satellite technology, live casino operations, and multi-level marketing — each chapter teaching me something the next one needed.\n\nI build things on the web. I read, research, and surprise people with what I create. I believe anything crafted with both heart and mind can become a work of art.\n\nCurrently focused on front-end development, growing one project at a time.",
+}
+
 const AboutPage = () => {
+  const [about, setAbout] = useState(null);
+
+  useEffect(() => {
+    fetchAbout().then(data => { if (data) setAbout(data); });
+  }, []);
+
+  const data = about || FALLBACK;
+
+  const paragraphs = (data.bio || '').split('\n').filter(p => p.trim());
+
   return (
     <ThemeProvider theme={DarkTheme}>
       <Box>
@@ -129,18 +146,13 @@ const AboutPage = () => {
         </Spaceman>
 
         <Main>
-          <Name>Mehmet Asker</Name>
-          <Role>Agile Coach &amp; Technical Mentor</Role>
+          <Name>{data.fullName}</Name>
+          <Role>{data.title}</Role>
           <Divider />
-          <Para>
-            My journey has taken me through <em>satellite technology</em>, live casino operations, and multi-level marketing — each chapter teaching me something the next one needed.
-          </Para>
-          <Para>
-            I build things on the web. I read, research, and surprise people with what I create. I believe anything crafted with both <em>heart and mind</em> can become a work of art.
-          </Para>
-          <Para>
-            Currently focused on front-end development, growing one project at a time.
-          </Para>
+          {paragraphs.length > 0
+            ? paragraphs.map((p, i) => <Para key={i}>{p}</Para>)
+            : <Para>{data.bio}</Para>
+          }
         </Main>
 
         <AnaTitle text="About" top="10%" left="5%" />
