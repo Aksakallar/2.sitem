@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
+import { submitContactMessage } from "../config/api";
 
 const Overlay = styled(motion.div)`
   position: fixed;
@@ -179,33 +180,34 @@ const ContactModal = ({ isOpen, onClose }) => {
     e.preventDefault();
     setIsLoading(true);
 
-    // FormSubmit.co ile email gönder
-    const formDataToSend = new FormData();
-    formDataToSend.append("name", formData.name);
-    formDataToSend.append("email", formData.email);
-    formDataToSend.append("subject", formData.subject);
-    formDataToSend.append("message", formData.message);
-
     try {
-      const response = await fetch("https://formsubmit.co/aksaka7@gmail.com", {
-        method: "POST",
-        body: formDataToSend,
-        headers: {
-          Accept: "application/json",
-        },
+      // API'ye kaydet
+      await submitContactMessage({
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
       });
 
-      if (response.ok) {
-        setIsLoading(false);
-        setIsSubmitted(true);
-        setTimeout(() => {
-          setIsSubmitted(false);
-          setFormData({ name: "", email: "", subject: "", message: "" });
-          onClose();
-        }, 2000);
-      } else {
-        throw new Error("Failed to send message");
-      }
+      // FormSubmit.co ile e-posta bildirimi gönder (arka planda, hata olsa da devam et)
+      const fd = new FormData();
+      fd.append("name", formData.name);
+      fd.append("email", formData.email);
+      fd.append("subject", formData.subject);
+      fd.append("message", formData.message);
+      fetch("https://formsubmit.co/aksaka7@gmail.com", {
+        method: "POST",
+        body: fd,
+        headers: { Accept: "application/json" },
+      }).catch(() => {});
+
+      setIsLoading(false);
+      setIsSubmitted(true);
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        onClose();
+      }, 2000);
     } catch (error) {
       console.error("FAILED...", error);
       setIsLoading(false);

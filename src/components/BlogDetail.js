@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
@@ -8,6 +8,7 @@ import SocialIcon from "../subComponents/SocialIcons";
 import PowerButton from "../subComponents/PowerButton";
 import LogoComponent from "../subComponents/LogoComponent";
 import { useBlogDetail } from "../hooks/useBlogApi";
+import { fetchPublicComments, createComment } from "../config/api";
 
 const MainContainer = styled(motion.div)`
   background-image: url(${img});
@@ -231,9 +232,116 @@ const NotFound = styled.div`
   margin-top: 4rem;
 `;
 
+const CommentsSection = styled.div`
+  margin-top: 2.5rem;
+  border-top: 2px solid ${(props) => props.theme.text};
+  padding-top: 1.5rem;
+`;
+
+const CommentTitle = styled.h3`
+  color: ${(props) => props.theme.text};
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  font-family: 'Karla', sans-serif;
+`;
+
+const CommentItem = styled.div`
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 0.9rem 0;
+  &:last-of-type { border-bottom: none; }
+`;
+
+const CommentAuthor = styled.span`
+  color: ${(props) => props.theme.text};
+  font-weight: 600;
+  font-size: 0.9rem;
+`;
+
+const CommentDate = styled.span`
+  color: rgba(255,255,255,0.4);
+  font-size: 0.78rem;
+  margin-left: 0.6rem;
+`;
+
+const CommentText = styled.p`
+  color: ${(props) => props.theme.text};
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0.3rem 0 0;
+  opacity: 0.85;
+`;
+
+const CommentForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+`;
+
+const CommentInput = styled.input`
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  color: ${(props) => props.theme.text};
+  font-size: 0.88rem;
+  outline: none;
+  &:focus { border-color: rgba(255,255,255,0.4); }
+  &::placeholder { color: rgba(255,255,255,0.3); }
+`;
+
+const CommentTextarea = styled.textarea`
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  padding: 0.65rem 0.9rem;
+  color: ${(props) => props.theme.text};
+  font-size: 0.88rem;
+  outline: none;
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+  &:focus { border-color: rgba(255,255,255,0.4); }
+  &::placeholder { color: rgba(255,255,255,0.3); }
+`;
+
+const CommentSubmitBtn = styled.button`
+  background: ${(props) => props.theme.text};
+  color: ${(props) => props.theme.body};
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: opacity 0.2s;
+  &:hover { opacity: 0.8; }
+  &:disabled { opacity: 0.4; cursor: not-allowed; }
+`;
+
+const CommentMsg = styled.p`
+  font-size: 0.82rem;
+  margin: 0;
+  color: ${(props) => props.success ? '#4ade80' : '#f87171'};
+`;
+
 const BlogDetail = () => {
   const { id } = useParams();
   const { blog, loading } = useBlogDetail(id);
+
+  const [comments, setComments] = useState([]);
+  const [commentName, setCommentName] = useState('');
+  const [commentEmail, setCommentEmail] = useState('');
+  const [commentText, setCommentText] = useState('');
+  const [commentSubmitting, setCommentSubmitting] = useState(false);
+  const [commentMsg, setCommentMsg] = useState(null); // { text, success }
+
+  useEffect(() => {
+    if (!id) return;
+    fetchPublicComments(id).then(setComments).catch(() => {});
+  }, [id]);
 
   if (loading) {
     return (
@@ -309,6 +417,47 @@ const BlogDetail = () => {
                 dangerouslySetInnerHTML={{ __html: blog.description }}
               />
             )}
+
+            <CommentsSection>
+              <CommentTitle>Yorumlar ({comments.length})</CommentTitle>
+              {comments.length === 0 && (
+                <CommentText style={{ opacity: 0.4 }}>Henüz yorum yok. İlk yorumu sen yaz!</CommentText>
+              )}
+              {comments.map((c) => (
+                <CommentItem key={c.id}>
+                  <CommentAuthor>{c.authorName}</CommentAuthor>
+                  <CommentDate>{new Date(c.createdAt).toLocaleDateString('tr-TR')}</CommentDate>
+                  <CommentText>{c.content}</CommentText>
+                </CommentItem>
+              ))}
+
+              <CommentForm onSubmit={async (e) => {
+                e.preventDefault();
+                if (!commentName.trim() || !commentEmail.trim() || !commentText.trim()) return;
+                setCommentSubmitting(true);
+                setCommentMsg(null);
+                try {
+                  await createComment({ postId: id, authorName: commentName.trim(), authorEmail: commentEmail.trim(), content: commentText.trim() });
+                  setCommentMsg({ text: 'Yorumunuz incelemeye alındı, teşekkürler!', success: true });
+                  setCommentName(''); setCommentEmail(''); setCommentText('');
+                } catch (err) {
+                  setCommentMsg({ text: err.message, success: false });
+                } finally {
+                  setCommentSubmitting(false);
+                }
+              }}>
+                <CommentTitle style={{ marginBottom: 0 }}>Yorum Yaz</CommentTitle>
+                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                  <CommentInput style={{ flex: 1, minWidth: 140 }} placeholder="Adınız *" value={commentName} onChange={(e) => setCommentName(e.target.value)} required />
+                  <CommentInput style={{ flex: 1, minWidth: 140 }} type="email" placeholder="E-posta *" value={commentEmail} onChange={(e) => setCommentEmail(e.target.value)} required />
+                </div>
+                <CommentTextarea placeholder="Yorumunuz *" value={commentText} onChange={(e) => setCommentText(e.target.value)} required />
+                {commentMsg && <CommentMsg success={commentMsg.success}>{commentMsg.text}</CommentMsg>}
+                <CommentSubmitBtn type="submit" disabled={commentSubmitting}>
+                  {commentSubmitting ? 'Gönderiliyor...' : 'Gönder'}
+                </CommentSubmitBtn>
+              </CommentForm>
+            </CommentsSection>
           </BlogContent>
         </BlogContainer>
       </Container>

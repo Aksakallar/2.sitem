@@ -10,6 +10,7 @@ import BlogDetail from "./components/BlogDetail";
 import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 import ServicesPage from "./components/ServicesPage";
+import MusicPage from "./components/MusicPage";
 import { AnimatePresence } from "framer-motion";
 
 import Sesbar from "./subComponents/Sesbar";
@@ -33,6 +34,7 @@ function App() {
             <Route exact path="/work" component={WorkPage} />
             <Route exact path="/skills" component={MySkillsPage} />
             <Route exact path="/services" component={ServicesPage} />
+            <Route exact path="/music" component={MusicPage} />
           </Switch>
         </AnimatePresence>
       </ThemeProvider>

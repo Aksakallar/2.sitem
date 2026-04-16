@@ -145,6 +145,16 @@ const SERVICES = styled(NavLink)`
   }
 `;
 
+const MUSIC = styled(NavLink)`
+  color: ${(props) => props.theme.text};
+  text-decoration: none;
+  z-index: 1;
+
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+`;
+
 const rotate = keyframes`
 
   from{
@@ -325,7 +335,7 @@ const Main = (props) => {
             </motion.h2>
           </Reference>
 
-          <SERVICES to="/services">
+          <MUSIC to="/music">
             <motion.h2
               initial={{
                 y: 200,
@@ -338,9 +348,10 @@ const Main = (props) => {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
             >
-              Services
+              Music
             </motion.h2>
-          </SERVICES>
+          </MUSIC>
+
         </BottomBar>
 
         {/* Mobile Layout - 800px altı için ayrı elementler */}

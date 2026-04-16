@@ -82,3 +82,49 @@ export async function createAppointment(data) {
   if (!res.ok) throw new Error(json.error || 'Randevu oluşturulamadı.');
   return json;
 }
+
+export async function submitContactMessage(data) {
+  const res = await fetch(`${API_URL}/api/messages`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(data),
+  });
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(json.error || 'Mesaj gönderilemedi.');
+  return json;
+}
+
+export async function subscribeNewsletter(email, name) {
+  const res = await fetch(`${API_URL}/api/subscribers`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify({ email, name }),
+  });
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(json.error || 'Abonelik başarısız.');
+  return json;
+}
+
+export async function fetchPublicComments(postId) {
+  const res = await fetch(`${API_URL}/api/comments?postId=${postId}`, { headers });
+  if (!res.ok) return [];
+  return res.json();
+}
+
+export async function createComment(data) {
+  const res = await fetch(`${API_URL}/api/comments`, {
+    method: 'POST',
+    headers,
+    body: JSON.stringify(data),
+  });
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(json.error || 'Yorum gönderilemedi.');
+  return json;
+}
+
+export async function fetchTracks(type) {
+  const qs = type ? `?type=${type}` : '';
+  const res = await fetch(`${API_URL}/api/tracks${qs}`, { headers });
+  if (!res.ok) return [];
+  return res.json();
+}

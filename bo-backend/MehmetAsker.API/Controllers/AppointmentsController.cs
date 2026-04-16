@@ -42,6 +42,7 @@ public class AppointmentsController : ControllerBase
                 a.Id,
                 a.CustomerName,
                 a.CustomerEmail,
+                a.CustomerPhone,
                 a.ScheduledAt,
                 a.DurationMinutes,
                 a.Status,
@@ -101,6 +102,7 @@ public class AppointmentsController : ControllerBase
             ServiceId = request.ServiceId,
             CustomerName = request.CustomerName.Trim(),
             CustomerEmail = request.CustomerEmail.Trim().ToLowerInvariant(),
+            CustomerPhone = request.CustomerPhone?.Trim(),
             ScheduledAt = request.ScheduledAt,
             DurationMinutes = request.DurationMinutes > 0 ? request.DurationMinutes : service.SessionDurationMinutes,
             Status = isFreeSession ? AppointmentStatus.Confirmed : AppointmentStatus.Pending,
@@ -198,6 +200,7 @@ public record AppointmentRequest(
     Guid ServiceId,
     string CustomerName,
     string CustomerEmail,
+    string? CustomerPhone,
     DateTime ScheduledAt,
     int DurationMinutes,
     string? Notes

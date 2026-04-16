@@ -15,6 +15,7 @@ public class Appointment : SiteBoundEntity
 
     public string CustomerName { get; set; } = null!;
     public string CustomerEmail { get; set; } = null!;
+    public string? CustomerPhone { get; set; }
     public DateTime ScheduledAt { get; set; }
     public int DurationMinutes { get; set; } = 60;
     public AppointmentStatus Status { get; set; } = AppointmentStatus.Pending;

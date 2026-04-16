@@ -25,6 +25,10 @@ public class AppDbContext : DbContext
     public DbSet<SocialLink> SocialLinks => Set<SocialLink>();
     public DbSet<Service> Services => Set<Service>();
     public DbSet<Appointment> Appointments => Set<Appointment>();
+    public DbSet<ContactMessage> ContactMessages => Set<ContactMessage>();
+    public DbSet<Subscriber> Subscribers => Set<Subscriber>();
+    public DbSet<Track> Tracks => Set<Track>();
+    public DbSet<Comment> Comments => Set<Comment>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -143,6 +147,34 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Appointment>()
             .HasOne(a => a.Service).WithMany(s => s.Appointments).HasForeignKey(a => a.ServiceId);
         modelBuilder.Entity<Appointment>()
+            .HasQueryFilter(x => x.SiteId == _siteId || _siteId == Guid.Empty);
+
+        // ContactMessage → Site
+        modelBuilder.Entity<ContactMessage>()
+            .HasOne(m => m.Site).WithMany().HasForeignKey(m => m.SiteId);
+        modelBuilder.Entity<ContactMessage>()
+            .HasQueryFilter(x => x.SiteId == _siteId || _siteId == Guid.Empty);
+
+        // Subscriber → Site (email unique per site)
+        modelBuilder.Entity<Subscriber>()
+            .HasOne(s => s.Site).WithMany().HasForeignKey(s => s.SiteId);
+        modelBuilder.Entity<Subscriber>()
+            .HasQueryFilter(x => x.SiteId == _siteId || _siteId == Guid.Empty);
+        modelBuilder.Entity<Subscriber>()
+            .HasIndex(s => new { s.Email, s.SiteId }).IsUnique();
+
+        // Track → Site
+        modelBuilder.Entity<Track>()
+            .HasOne(t => t.Site).WithMany().HasForeignKey(t => t.SiteId);
+        modelBuilder.Entity<Track>()
+            .HasQueryFilter(x => x.SiteId == _siteId || _siteId == Guid.Empty);
+
+        // Comment → Site + Post
+        modelBuilder.Entity<Comment>()
+            .HasOne(c => c.Site).WithMany().HasForeignKey(c => c.SiteId);
+        modelBuilder.Entity<Comment>()
+            .HasOne(c => c.Post).WithMany().HasForeignKey(c => c.PostId);
+        modelBuilder.Entity<Comment>()
             .HasQueryFilter(x => x.SiteId == _siteId || _siteId == Guid.Empty);
     }
 }

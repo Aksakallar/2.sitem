@@ -56,6 +56,7 @@ builder.Services.AddCors(options =>
         policy.WithOrigins(
             "http://localhost:3000",
             "http://localhost:3001",
+            "http://localhost:3002",
             builder.Configuration["AllowedOrigins:BOPanel"] ?? "http://localhost:3000",
             builder.Configuration["AllowedOrigins:ReactSite"] ?? "https://mehmetasker.com"
         )
