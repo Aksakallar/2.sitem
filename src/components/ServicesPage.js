@@ -329,7 +329,7 @@ const ServicesPage = () => {
         customerName: name.trim(),
         customerEmail: email.trim(),
         scheduledAt,
-        durationMinutes: selected.sessionDurationMinutes,
+        durationMinutes: selected.durationMinutes ?? 60,
       });
       setSuccessMsg(result.message || 'Randevunuz alındı!');
       setStep('success');
@@ -370,18 +370,9 @@ const ServicesPage = () => {
                 {svc.description && <ServiceDesc>{svc.description}</ServiceDesc>}
 
                 <PriceRow>
-                  <Price>{svc.packagePriceEur} EUR</Price>
-                  <PriceSub>/ {svc.packageHours} seans</PriceSub>
+                  <Price>{svc.price} {svc.currency || 'EUR'}</Price>
+                  {svc.durationMinutes && <PriceSub>/ {svc.durationMinutes} dk</PriceSub>}
                 </PriceRow>
-
-                <InfoNote>
-                  {svc.sessionDurationMinutes} dk · seans başına{' '}
-                  {(svc.packagePriceEur / svc.packageHours).toFixed(0)} EUR
-                </InfoNote>
-
-                {svc.isFreeFirstSession && (
-                  <FreeBadge>İlk seans ücretsiz</FreeBadge>
-                )}
 
                 <BookBtn onClick={() => openModal(svc)}>
                   Randevu Al
@@ -428,11 +419,10 @@ const ServicesPage = () => {
                 <>
                   <ModalTitle>Randevu Al — {selected.title}</ModalTitle>
 
-                  {selected.isFreeFirstSession && (
-                    <FreeBadge style={{ alignSelf: 'flex-start' }}>
-                      İlk seans ücretsiz
-                    </FreeBadge>
-                  )}
+                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.88rem' }}>
+                    {selected.price} {selected.currency || 'EUR'}
+                    {selected.durationMinutes && ` · ${selected.durationMinutes} dk`}
+                  </div>
 
                   <Label>
                     Adınız Soyadınız

@@ -332,7 +332,7 @@ const MySkillsPage = () => {
         customerEmail: email.trim(),
         customerPhone: phone.trim(),
         scheduledAt,
-        durationMinutes: selected.sessionDurationMinutes,
+        durationMinutes: selected.durationMinutes ?? 60,
       });
       setSuccessMsg(result.message || 'Randevunuz alındı!');
       setStep('success');
@@ -366,14 +366,9 @@ const MySkillsPage = () => {
                 <ServiceTitle>{svc.title}</ServiceTitle>
                 {svc.description && <ServiceDesc>{svc.description}</ServiceDesc>}
                 <PriceRow>
-                  <Price>{svc.packagePriceEur} EUR</Price>
-                  <PriceSub>/ {svc.packageHours} seans</PriceSub>
+                  <Price>{svc.price} {svc.currency || 'EUR'}</Price>
+                  {svc.durationMinutes && <PriceSub>/ {svc.durationMinutes} dk</PriceSub>}
                 </PriceRow>
-                <InfoNote style={{ color: 'rgba(0,0,0,0.4)', textAlign: 'left' }}>
-                  {svc.sessionDurationMinutes} dk · seans başına{' '}
-                  {(svc.packagePriceEur / svc.packageHours).toFixed(0)} EUR
-                </InfoNote>
-                {svc.isFreeFirstSession && <FreeBadge>İlk seans ücretsiz</FreeBadge>}
                 <BookBtn onClick={() => openModal(svc)}>Randevu Al</BookBtn>
               </ServiceCard>
             ))}
@@ -464,11 +459,10 @@ const MySkillsPage = () => {
               ) : (
                 <>
                   <ModalTitle>Randevu Al — {selected.title}</ModalTitle>
-                  {selected.isFreeFirstSession && (
-                    <span style={{ display: 'inline-block', background: 'rgba(100,200,120,0.15)', border: '1px solid rgba(100,200,120,0.4)', color: '#7dde8a', fontSize: '0.72rem', fontWeight: 600, padding: '0.2rem 0.7rem', borderRadius: 20 }}>
-                      İlk seans ücretsiz
-                    </span>
-                  )}
+                  <div style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.88rem' }}>
+                    {selected.price} {selected.currency || 'EUR'}
+                    {selected.durationMinutes && ` · ${selected.durationMinutes} dk`}
+                  </div>
                   <Label>
                     Adınız Soyadınız
                     <Input value={name} onChange={e => setName(e.target.value)} placeholder="Mehmet Asker" />
