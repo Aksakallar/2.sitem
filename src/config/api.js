@@ -9,19 +9,19 @@ const headers = {
 export async function fetchAbout() {
   const res = await fetch(`${API_URL}/api/settings/about`, { headers });
   if (!res.ok) return null;
-  return res.json();
+  return res.json().catch(() => null);
 }
 
 export async function fetchSkills() {
   const res = await fetch(`${API_URL}/api/settings/skills`, { headers });
   if (!res.ok) return [];
-  return res.json();
+  return res.json().catch(() => []);
 }
 
 export async function fetchSocialLinks() {
   const res = await fetch(`${API_URL}/api/settings/social`, { headers });
   if (!res.ok) return [];
-  return res.json();
+  return res.json().catch(() => []);
 }
 
 export async function fetchPosts({ page = 1, pageSize = 20 } = {}) {
@@ -108,7 +108,7 @@ export async function subscribeNewsletter(email, name) {
 export async function fetchPublicComments(postId) {
   const res = await fetch(`${API_URL}/api/comments?postId=${postId}`, { headers });
   if (!res.ok) return [];
-  return res.json();
+  return res.json().catch(() => []);
 }
 
 export async function createComment(data) {
@@ -126,5 +126,5 @@ export async function fetchTracks(type) {
   const qs = type ? `?type=${type}` : '';
   const res = await fetch(`${API_URL}/api/tracks${qs}`, { headers });
   if (!res.ok) return [];
-  return res.json();
+  return res.json().catch(() => []);
 }

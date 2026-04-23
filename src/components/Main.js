@@ -145,15 +145,6 @@ const SERVICES = styled(NavLink)`
   }
 `;
 
-const MUSIC = styled(NavLink)`
-  color: ${(props) => props.theme.text};
-  text-decoration: none;
-  z-index: 1;
-
-  @media screen and (max-width: 800px) {
-    display: none;
-  }
-`;
 
 const rotate = keyframes`
 
@@ -334,23 +325,6 @@ const Main = (props) => {
               My Skills
             </motion.h2>
           </Reference>
-
-          <MUSIC to="/music">
-            <motion.h2
-              initial={{
-                y: 200,
-                transition: { type: "spring", duration: 1.5, delay: 1 },
-              }}
-              animate={{
-                y: 0,
-                transition: { type: "spring", duration: 1.5, delay: 1 },
-              }}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Music
-            </motion.h2>
-          </MUSIC>
 
         </BottomBar>
 
