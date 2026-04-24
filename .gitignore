@@ -10,10 +10,12 @@ bo-backend/**/*.user
 bo-backend/**/.env
 bo-backend/**/appsettings.Development.json
 
-# BO Panel
-bo-panel/.next/
-bo-panel/node_modules/
-bo-panel/.env.local
-bo-panel/.env*.local
+# BO Panel artık ayrı repo (MaskerBoControl) — bu klasör yok
+bo-panel/
+
+# Backend build çıktıları (deploy'dan sonra kalan)
+bo-backend/out/
+.env.local
+
 # Local Netlify folder
 .netlify

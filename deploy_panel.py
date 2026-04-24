@@ -15,9 +15,9 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='repla
 VPS_HOST = "72.61.92.189"
 VPS_PORT = 22
 VPS_USER = "root"
-LOCAL_STANDALONE = r"c:\Users\Ak24k\OneDrive\Masaüstü\Test AI\mehmetasker\bo-panel\.next\standalone"
-LOCAL_STATIC = r"c:\Users\Ak24k\OneDrive\Masaüstü\Test AI\mehmetasker\bo-panel\.next\static"
-LOCAL_PUBLIC = r"c:\Users\Ak24k\OneDrive\Masaüstü\Test AI\mehmetasker\bo-panel\public"
+LOCAL_STANDALONE = r"c:\Users\Ak24k\OneDrive\Masaüstü\Test AI\MaskerBoControl\.next\standalone"
+LOCAL_STATIC = r"c:\Users\Ak24k\OneDrive\Masaüstü\Test AI\MaskerBoControl\.next\static"
+LOCAL_PUBLIC = r"c:\Users\Ak24k\OneDrive\Masaüstü\Test AI\MaskerBoControl\public"
 REMOTE_DIR = "/var/www/mehmetasker/bo-panel"
 SERVICE_NAME = "mehmetasker-bo"
 
