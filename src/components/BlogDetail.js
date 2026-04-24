@@ -280,20 +280,20 @@ const CommentForm = styled.form`
 `;
 
 const CommentInput = styled.input`
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.18);
   border-radius: 8px;
   padding: 0.65rem 0.9rem;
   color: ${(props) => props.theme.text};
   font-size: 0.88rem;
   outline: none;
-  &:focus { border-color: rgba(255,255,255,0.4); }
-  &::placeholder { color: rgba(255,255,255,0.3); }
+  &:focus { border-color: rgba(0,0,0,0.5); background: rgba(0,0,0,0.05); }
+  &::placeholder { color: rgba(0,0,0,0.4); }
 `;
 
 const CommentTextarea = styled.textarea`
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.18);
   border-radius: 8px;
   padding: 0.65rem 0.9rem;
   color: ${(props) => props.theme.text};
@@ -302,8 +302,8 @@ const CommentTextarea = styled.textarea`
   resize: vertical;
   min-height: 80px;
   font-family: inherit;
-  &:focus { border-color: rgba(255,255,255,0.4); }
-  &::placeholder { color: rgba(255,255,255,0.3); }
+  &:focus { border-color: rgba(0,0,0,0.5); background: rgba(0,0,0,0.05); }
+  &::placeholder { color: rgba(0,0,0,0.4); }
 `;
 
 const CommentSubmitBtn = styled.button`
