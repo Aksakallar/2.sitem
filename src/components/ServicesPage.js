@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import styled, { ThemeProvider, keyframes } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import { DarkTheme } from './Themes';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -34,11 +34,6 @@ const Grid = styled(motion.div)`
     grid-template-columns: 1fr;
     max-width: 460px;
   }
-`;
-
-const shimmer = keyframes`
-  0%   { background-position: -400px 0 }
-  100% { background-position: 400px 0 }
 `;
 
 const ServiceCard = styled(motion.div)`
@@ -90,17 +85,6 @@ const PriceSub = styled.span`
   font-size: 0.8rem;
 `;
 
-const FreeBadge = styled.span`
-  display: inline-block;
-  background: rgba(100, 200, 120, 0.15);
-  border: 1px solid rgba(100, 200, 120, 0.4);
-  color: #7dde8a;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 0.2rem 0.7rem;
-  border-radius: 20px;
-  letter-spacing: 0.03em;
-`;
 
 const BookBtn = styled.button`
   background: ${props => props.theme.text};

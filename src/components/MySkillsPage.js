@@ -93,17 +93,6 @@ const PriceSub = styled.span`
   font-size: 0.78rem;
 `
 
-const FreeBadge = styled.span`
-  display: inline-block;
-  background: rgba(50, 160, 80, 0.12);
-  border: 1px solid rgba(50, 160, 80, 0.35);
-  color: #2a8a4a;
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
-  border-radius: 20px;
-`
-
 const BookBtn = styled.button`
   background: ${props => props.theme.text};
   color: ${props => props.theme.body};
@@ -250,16 +239,6 @@ const NoSlots = styled.p`
   font-size: 0.84rem;
   margin: 0;
 `
-
-const gridVariants = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.12 } },
-}
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  show:   { opacity: 1, y: 0, transition: { duration: 0.4 } },
-}
 
 // ─── Bileşen ──────────────────────────────────────────────────────────────────
 

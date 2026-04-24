@@ -135,17 +135,6 @@ const Reference = styled(NavLink)`
   }
 `;
 
-const SERVICES = styled(NavLink)`
-  color: ${(props) => props.theme.text};
-  text-decoration: none;
-  z-index: 1;
-
-  @media screen and (max-width: 800px) {
-    display: none;
-  }
-`;
-
-
 const rotate = keyframes`
 
   from{
