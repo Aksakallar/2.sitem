@@ -16,7 +16,7 @@ VPS_HOST = "72.61.92.189"
 VPS_PORT = 22
 VPS_USER = "root"
 LOCAL_OUT = r"c:\Users\Ak24k\OneDrive\Masaüstü\Test AI\mehmetasker\bo-backend\out\api"
-REMOTE_DIR = "/var/www/mehmetasker/api"
+REMOTE_DIR = "/root/mehmetasker-api"
 SERVICE_NAME = "mehmetasker-api"
 
 def run(ssh, cmd):

@@ -139,7 +139,9 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Service>()
             .HasQueryFilter(x => x.SiteId == _siteId || _siteId == Guid.Empty);
         modelBuilder.Entity<Service>()
-            .Property(s => s.PackagePriceEur).HasPrecision(10, 2);
+            .Property(s => s.Price).HasPrecision(10, 2);
+        modelBuilder.Entity<Service>()
+            .Property(s => s.Currency).HasMaxLength(3);
 
         // Appointment → Site
         modelBuilder.Entity<Appointment>()

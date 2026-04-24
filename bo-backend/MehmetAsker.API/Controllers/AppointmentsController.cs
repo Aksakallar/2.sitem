@@ -89,14 +89,6 @@ public class AppointmentsController : ControllerBase
         if (hasConflict)
             return Conflict(new { error = "Seçilen saat dolu. Lütfen başka bir saat seçin." });
 
-        // İlk seans ücretsiz mi kontrolü
-        var hasPreviousFreeSession = await _db.Appointments.AnyAsync(a =>
-            a.CustomerEmail == request.CustomerEmail &&
-            a.ServiceId == request.ServiceId &&
-            a.IsFreeSession);
-
-        var isFreeSession = service.IsFreeFirstSession && !hasPreviousFreeSession;
-
         var appointment = new Appointment
         {
             ServiceId = request.ServiceId,
@@ -104,9 +96,9 @@ public class AppointmentsController : ControllerBase
             CustomerEmail = request.CustomerEmail.Trim().ToLowerInvariant(),
             CustomerPhone = request.CustomerPhone?.Trim(),
             ScheduledAt = request.ScheduledAt,
-            DurationMinutes = request.DurationMinutes > 0 ? request.DurationMinutes : service.SessionDurationMinutes,
-            Status = isFreeSession ? AppointmentStatus.Confirmed : AppointmentStatus.Pending,
-            IsFreeSession = isFreeSession,
+            DurationMinutes = request.DurationMinutes > 0 ? request.DurationMinutes : (service.DurationMinutes ?? 60),
+            Status = AppointmentStatus.Pending,
+            IsFreeSession = false,
             Notes = request.Notes?.Trim(),
             SiteId = service.SiteId,
             CreatedAt = DateTime.UtcNow
@@ -121,10 +113,7 @@ public class AppointmentsController : ControllerBase
             appointment.CustomerName,
             appointment.ScheduledAt,
             appointment.Status,
-            appointment.IsFreeSession,
-            message = isFreeSession
-                ? "Ücretsiz ilk seansiniz onaylandı!"
-                : "Randevunuz alındı. Ödeme sonrası onaylanacaktır."
+            message = "Randevunuz alındı. Ödeme sonrası onaylanacaktır."
         });
     }
 
@@ -187,8 +176,8 @@ public class AppointmentsController : ControllerBase
 
         var available = allSlots
             .Where(slot => !takenSlots.Any(t =>
-                t < slot.AddMinutes(service.SessionDurationMinutes) &&
-                t.AddMinutes(service.SessionDurationMinutes) > slot))
+                t < slot.AddMinutes((service.DurationMinutes ?? 60)) &&
+                t.AddMinutes((service.DurationMinutes ?? 60)) > slot))
             .Select(slot => slot.ToString("HH:mm"))
             .ToList();
 

@@ -36,8 +36,7 @@ public class ServicesController : ControllerBase
             .Select(s => new
             {
                 s.Id, s.Title, s.Description, s.IsActive,
-                s.IsFreeFirstSession, s.SessionDurationMinutes,
-                s.PackageHours, s.PackagePriceEur, s.SortOrder
+                s.Price, s.Currency, s.DurationMinutes, s.SortOrder
             })
             .ToListAsync();
 
@@ -64,10 +63,9 @@ public class ServicesController : ControllerBase
             Title = request.Title.Trim(),
             Description = request.Description?.Trim(),
             IsActive = request.IsActive,
-            IsFreeFirstSession = request.IsFreeFirstSession,
-            SessionDurationMinutes = request.SessionDurationMinutes,
-            PackageHours = request.PackageHours,
-            PackagePriceEur = request.PackagePriceEur,
+            Price = request.Price,
+            Currency = (request.Currency ?? "EUR").Trim().ToUpperInvariant(),
+            DurationMinutes = request.DurationMinutes,
             SortOrder = request.SortOrder,
             SiteId = _site.SiteId,
             CreatedAt = DateTime.UtcNow
@@ -91,10 +89,9 @@ public class ServicesController : ControllerBase
         service.Title = request.Title.Trim();
         service.Description = request.Description?.Trim();
         service.IsActive = request.IsActive;
-        service.IsFreeFirstSession = request.IsFreeFirstSession;
-        service.SessionDurationMinutes = request.SessionDurationMinutes;
-        service.PackageHours = request.PackageHours;
-        service.PackagePriceEur = request.PackagePriceEur;
+        service.Price = request.Price;
+        service.Currency = (request.Currency ?? "EUR").Trim().ToUpperInvariant();
+        service.DurationMinutes = request.DurationMinutes;
         service.SortOrder = request.SortOrder;
         service.UpdatedAt = DateTime.UtcNow;
 
@@ -139,9 +136,8 @@ public record ServiceRequest(
     string Title,
     string? Description,
     bool IsActive,
-    bool IsFreeFirstSession,
-    int SessionDurationMinutes,
-    int PackageHours,
-    decimal PackagePriceEur,
+    decimal Price,
+    string? Currency,
+    int? DurationMinutes,
     int SortOrder
 );
